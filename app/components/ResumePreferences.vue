@@ -7,6 +7,7 @@
       </select>
     </label>
     <button type="button" :aria-pressed="isDark" :aria-label="t('resume.toggleTheme')" @click="toggleDarkMode">[{{ isDark ? 'light' : 'dark' }}]</button>
+    <a class="personal-site-link" href="https://ricepastem.cafe/" target="_blank" rel="noopener noreferrer">[{{ t('resume.personalSite') }}]</a>
   </div>
 </template>
 
@@ -22,4 +23,6 @@ select, button { color: var(--color-text-secondary); background: transparent; bo
 select { min-width: 0; max-width: 100%; }
 button { text-align: left; padding: 8px; }
 button:hover { color: var(--color-text-primary); background: var(--color-bg-hover); }
+.personal-site-link { display: block; padding: 8px; color: var(--color-text-secondary); text-decoration: none; }
+.personal-site-link:hover { color: var(--color-text-primary); background: var(--color-bg-hover); }
 </style>
