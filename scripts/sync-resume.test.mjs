@@ -4,7 +4,7 @@ import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { stringify } from 'devalue'
-import { validateResume, extractResume, validateManifest, synchronize } from './sync-resume.mjs'
+import { validateResume, extractResume, extractResumeSnapshot, validateTranslations, validateManifest, synchronize } from './sync-resume.mjs'
 
 const profile = { name: 'Test Resume', sections: [{ title: 'Research', items: [{ title: 'Paper', is_featured: true, authors: [{ name: 'Author' }] }] }] }
 const page = `<script type="application/json" id="__NUXT_DATA__">${stringify({ data: { 'active-resume': profile } })}</script>`
@@ -21,6 +21,37 @@ test('extracts the actual page snapshot including authors and featured flags', (
   assert.deepEqual(extractResume(page), profile)
   assert.throws(() => extractResume('<html>Service unavailable</html>'), /Missing Nuxt payload/)
   assert.throws(() => extractResume('<script id="__NUXT_DATA__">invalid</script>'))
+})
+
+test('extracts all language dictionaries from Nuxt state and rejects missing translations', () => {
+  const resume = { ...profile, summary: '研究简介' }
+  const bundle = { sourceLocale: 'zh-CN', locales: {
+    en: { '研究简介': 'Research summary' }, 'zh-TW': { '研究简介': '研究簡介' }, ja: { '研究简介': '研究概要' }
+  } }
+  const html = `<script id="__NUXT_DATA__">${stringify({ data: { 'active-resume': resume }, state: { '$sresume-translations': bundle } })}</script>`
+  assert.deepEqual(extractResumeSnapshot(html), { resume, translations: bundle })
+  assert.equal(validateTranslations(resume, bundle), bundle)
+  assert.throws(() => validateTranslations(resume, { locales: { en: {} } }), /incomplete/)
+})
+
+test('keeps local translations before the source deployment and adopts the source bundle afterward', async () => {
+  const dir = await mkdtemp(join(tmpdir(), 'resume-translations-'))
+  const resume = { ...profile, summary: '研究简介' }
+  const bundle = { sourceLocale: 'zh-CN', locales: Object.fromEntries(['en', 'zh-TW', 'ja'].map(locale => [locale, { '研究简介': `Translation ${locale}` }])) }
+  let remoteBundle
+  try {
+    await mkdir(join(dir, 'app/i18n'), { recursive: true })
+    await writeFile(join(dir, 'app/i18n/resume-content.json'), JSON.stringify(bundle))
+    const get = async url => Buffer.from(String(url).endsWith('/resume')
+      ? `<script id="__NUXT_DATA__">${stringify({ data: { 'active-resume': resume }, state: remoteBundle ? { '$sresume-translations': remoteBundle } : {} })}</script>`
+      : String(url).endsWith('.json') ? JSON.stringify(manifest) : 'abc')
+    await synchronize(dir, get)
+    assert.deepEqual(JSON.parse(await readFile(join(dir, 'app/i18n/resume-content.json'))), bundle)
+    remoteBundle = structuredClone(bundle)
+    remoteBundle.locales.en['研究简介'] = 'Updated source translation'
+    await synchronize(dir, get)
+    assert.equal(JSON.parse(await readFile(join(dir, 'app/i18n/resume-content.json'))).locales.en['研究简介'], 'Updated source translation')
+  } finally { await rm(dir, { recursive: true, force: true }) }
 })
 
 test('rejects unsafe paths and inconsistent font lengths', () => {

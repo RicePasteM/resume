@@ -2,16 +2,20 @@ import assert from 'node:assert/strict'
 import { readFile, stat } from 'node:fs/promises'
 import { join } from 'node:path'
 import { createHash } from 'node:crypto'
+import { validateTranslations } from './sync-resume.mjs'
 
 const output = '.output/public'
 const base = process.env.NUXT_APP_BASE_URL || '/resume/'
 const html = await readFile(join(output, 'index.html'), 'utf8')
 const snapshot = await readFile('app/data/resume.json', 'utf8')
 const resume = JSON.parse(snapshot)
+validateTranslations(resume, JSON.parse(await readFile('app/i18n/resume-content.json', 'utf8')))
 const meta = JSON.parse(await readFile(join(output, 'sync.json'), 'utf8'))
 assert.equal(meta.sha256, createHash('sha256').update(snapshot).digest('hex'))
 assert.ok(html.includes(resume.name.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')), 'Profile must appear in server-rendered HTML')
 assert.ok(html.includes(`href="${base}"`), 'HTML base must match the Pages path')
+assert.ok(html.includes('<title>胡张驰（Zhangchi Hu）</title>'), 'The title must use the requested name')
+assert.ok(!html.includes("RicePasteM's Cafe"), 'The independent resume must not contain Cafe branding')
 const assets = [...html.matchAll(/(?:src|href)="([^"?#]+\/_nuxt\/[^"?#]+)"/g)].map(match => match[1])
 assert.ok(assets.length, 'No generated Nuxt assets found')
 for (const url of assets) {

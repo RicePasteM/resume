@@ -1,7 +1,7 @@
 {
   "resume": {
-    "title": "Resume - RicePasteM's Cafe",
-    "description": "RicePasteM's resume homepage, containing skills, experience, projects, and contact info",
+    "title": "胡张驰（Zhangchi Hu）",
+    "description": "Academic résumé of Zhangchi Hu: computer vision research, publications, education, and industry experience.",
     "print": "Print",
     "getPdf": "Get PDF",
     "generatingPdf": "Generating...",
@@ -29,7 +29,11 @@
     "expandPublicationPoints": "Expand key points",
     "viewAllPublications": "View all papers ({count})",
     "featuredPublications": "Featured papers",
-    "allPublications": "All papers"
+    "allPublications": "All papers",
+    "wechat": "WeChat",
+    "language": "Language",
+    "toggleTheme": "Toggle dark mode",
+    "personalSite": "Visit my personal website"
   },
   "locale": {
     "label": "Language",

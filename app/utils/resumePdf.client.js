@@ -260,7 +260,7 @@ const makeFilename = (resume) => {
   return `${base || 'resume'}.pdf`
 }
 
-export const generateResumePdf = async (resume) => {
+export const generateResumePdf = async (resume, { equalContribution = '† 同等贡献' } = {}) => {
   const doc = new jsPDF({
     unit: 'pt',
     format: 'a4',
@@ -580,7 +580,7 @@ export const generateResumePdf = async (resume) => {
 
     if (isPublicationSection(section)) {
       const authors = publicationAuthorsMarkdown(item, resume.name)
-      if (authors) drawWrapped(authors + (item.authors?.some(author => author.is_co_first) ? '  († 同等贡献)' : ''), PAGE.marginX + 5.25, contentWidth - 5.25, {
+      if (authors) drawWrapped(authors + (item.authors?.some(author => author.is_co_first) ? `  (${equalContribution})` : ''), PAGE.marginX + 5.25, contentWidth - 5.25, {
         size: BODY_SIZE,
         color: COLOR.ink,
         leading: 13.5

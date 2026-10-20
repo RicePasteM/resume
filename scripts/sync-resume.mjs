@@ -3,6 +3,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createHash } from 'node:crypto'
 import { parse } from 'devalue'
+import { collectResumeStrings } from '../app/utils/resumeLocale.js'
 
 export const SOURCE_URL = 'https://ricepastem.cafe/resume'
 const root = fileURLToPath(new URL('../', import.meta.url))
@@ -19,13 +20,31 @@ export function validateResume(resume) {
 }
 
 export function extractResume(html) {
+  return extractResumeSnapshot(html).resume
+}
+
+export function extractResumeSnapshot(html) {
   const scripts = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)]
   const script = scripts.find(match => /\bid\s*=\s*["']__NUXT_DATA__["']/i.test(match[1]))
   if (!script) throw new Error('Missing Nuxt payload in the source page')
   // Decode Nuxt's JSON serialization without executing any source-page JavaScript.
   const identity = value => value
   const payload = parse(script[2], { ShallowReactive: identity, Reactive: identity, Ref: identity, ShallowRef: identity, Set: values => new Set(values) })
-  return validateResume(payload?.data?.['active-resume'])
+  return {
+    resume: validateResume(payload?.data?.['active-resume']),
+    translations: payload?.state?.['$sresume-translations']
+  }
+}
+
+export function validateTranslations(resume, bundle) {
+  const strings = collectResumeStrings(resume)
+  for (const locale of ['zh-TW', 'en', 'ja']) {
+    const dictionary = bundle?.locales?.[locale]
+    if (strings.some(value => typeof dictionary?.[value] !== 'string' || !dictionary[value].trim())) {
+      throw new Error(`Resume translations are incomplete for ${locale}; deploy the source translations before synchronizing changed content`)
+    }
+  }
+  return bundle || { sourceLocale: 'zh-CN', locales: {} }
 }
 
 export function validateManifest(manifest) {
@@ -56,7 +75,9 @@ async function save(path, content) {
 }
 
 export async function synchronize(destination = root, get = download) {
-  const resume = extractResume((await get(SOURCE_URL)).toString())
+  const { resume, translations: sourceTranslations } = extractResumeSnapshot((await get(SOURCE_URL)).toString())
+  const localTranslations = await readFile(join(destination, 'app/i18n/resume-content.json'), 'utf8').then(JSON.parse).catch(() => null)
+  const translations = validateTranslations(resume, sourceTranslations || localTranslations)
   // Reuse cached fonts when the source manifest matches; download updates only.
   for (const font of ['songti-sc-regular', 'songti-sc-bold']) {
     const prefix = `fonts/chunks/${font}/`
@@ -90,9 +111,11 @@ export async function synchronize(destination = root, get = download) {
     source: SOURCE_URL,
     format: 'nuxt-ssr-payload',
     fetchedAt: new Date().toISOString(),
-    sha256: createHash('sha256').update(content).digest('hex')
+    sha256: createHash('sha256').update(content).digest('hex'),
+    translatedLocales: ['zh-TW', 'en', 'ja']
   }
   await save(join(destination, 'app/data/resume.json'), content)
+  await save(join(destination, 'app/i18n/resume-content.json'), `${JSON.stringify(translations, null, 2)}\n`)
   await save(join(destination, 'public/sync.json'), `${JSON.stringify(metadata, null, 2)}\n`)
   console.log(`Synced ${resume.name}: ${resume.sections.length} sections (${metadata.sha256.slice(0, 12)})`)
 }

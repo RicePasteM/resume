@@ -1,7 +1,7 @@
 {
   "resume": {
-    "title": "简历 - RicePasteM's Cafe",
-    "description": "RicePasteM 的简历版主页，包含技能、经历、项目和联系方式",
+    "title": "胡张驰（Zhangchi Hu）",
+    "description": "胡张驰的学术简历，涵盖计算机视觉研究、论文发表、教育背景与产业经历。",
     "print": "打印",
     "getPdf": "获取PDF",
     "generatingPdf": "生成中...",
@@ -29,7 +29,11 @@
     "expandPublicationPoints": "展开要点",
     "viewAllPublications": "查看全部论文（{count}篇）",
     "featuredPublications": "精选论文",
-    "allPublications": "全部论文"
+    "allPublications": "全部论文",
+    "wechat": "微信",
+    "language": "语言",
+    "toggleTheme": "切换深色模式",
+    "personalSite": "访问我的个人站点"
   },
   "locale": {
     "label": "语言",

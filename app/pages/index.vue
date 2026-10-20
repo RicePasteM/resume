@@ -29,6 +29,7 @@
           >
             [{{ isGeneratingPdf ? t('resume.generatingPdf') : t('resume.getPdf') }}]
           </button>
+          <ResumePreferences />
         </div>
       </aside>
 
@@ -154,11 +155,16 @@ import ResumeTerminal from '~/components/ResumeTerminal.vue'
 import PublicationAuthors from '~/components/PublicationAuthors.vue'
 import { isPublicationSection, filterResumeItems, publicationTags } from '~/utils/resumePublications.js'
 import { usePublicationPoints } from '~/composables/usePublicationPoints.js'
+import resumeContent from '~/i18n/resume-content.json'
+import { localizeResume } from '~/utils/resumeLocale.js'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+// Expose every locale in the SSR payload so the standalone Pages mirror can
+// synchronize the same translations without an API key or browser AI requests.
+const resumeTranslations = useState('resume-translations', () => resumeContent)
 
 useHead(() => ({
-  title: t('resume.title'),
+  title: '胡张驰（Zhangchi Hu）',
   meta: [
     { name: 'description', content: t('resume.description') }
   ]
@@ -243,12 +249,14 @@ const asciiTitle = String.raw` ____  _____ ____  _   _ __  __ _____
 |  _ <| |___ ___) | |_| | |  | | |___
 |_| \_\_____|____/ \___/|_|  |_|_____|`
 
-const resume = computed(() => {
+const sourceResume = computed(() => {
   if (!resumeData.value || !Array.isArray(resumeData.value.sections) || resumeData.value.sections.length === 0) {
     return fallbackResume
   }
   return resumeData.value
 })
+
+const resume = computed(() => localizeResume(sourceResume.value, locale.value, resumeTranslations.value))
 
 const visibleSections = computed(() => {
   return [...(resume.value.sections || [])].filter(section => section.is_visible !== false).sort(sortByOrder)
@@ -264,9 +272,8 @@ let suppressObserverUntil = 0
 
 const contactParts = computed(() => {
   const contacts = []
-  if (resume.value.phone) contacts.push({ text: `微信：${resume.value.phone}` })
+  if (resume.value.phone) contacts.push({ text: `${t('resume.wechat')}：${resume.value.phone}` })
   if (resume.value.email) contacts.push({ text: resume.value.email, href: `mailto:${resume.value.email}` })
-  if (resume.value.website) contacts.push({ text: resume.value.website, href: normalizedUrl(resume.value.website) })
   if (resume.value.github) contacts.push({ text: resume.value.github, href: normalizedUrl(resume.value.github) })
   if (resume.value.location) contacts.push({ text: resume.value.location })
   return contacts
@@ -409,7 +416,7 @@ const getPdf = async () => {
         title: displaySectionTitle(section),
         items: visibleItems(section)
       }))
-    })
+    }, { equalContribution: t('resume.equalContribution') })
   } catch (error) {
     console.error('生成 PDF 失败:', error)
     window.alert(t('resume.generatePdfFailed'))

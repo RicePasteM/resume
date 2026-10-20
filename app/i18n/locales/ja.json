@@ -1,7 +1,7 @@
 {
   "resume": {
-    "title": "レジュメ - RicePasteM's Cafe",
-    "description": "RicePasteMのレジュメ版ホームページ。スキル、経験、プロジェクト、連絡先を含みます。",
+    "title": "胡张驰（Zhangchi Hu）",
+    "description": "胡張馳（Zhangchi Hu）の学術履歴書。コンピュータビジョン研究、論文、学歴、研究・実務経験を紹介します。",
     "print": "プリント",
     "getPdf": "PDFを取得",
     "generatePdfFailed": "PDFの生成に失敗しました。しばらくしてからもう一度お試しください。",
@@ -20,16 +20,20 @@
     "skills": "スキルスタック",
     "selectedProjects": "厳選プロジェクト",
     "fallbackProjectDesc": "個人コンテンツとプロジェクトのプラットフォーム。ブログ、生活近況、プロジェクト紹介、アバウトページを統合。",
-    "generatingPdf": "生成中...",
-    "name": "米糊 / RicePasteM",
-    "location": "所在地",
-    "locationValue": "中国",
     "equalContribution": "† 同等貢献",
     "noMatchingPublications": "該当する論文はありません",
     "expandPublicationPoints": "要点を展開",
     "viewAllPublications": "全論文を表示（{count}件）",
     "featuredPublications": "注目論文",
-    "allPublications": "全論文"
+    "allPublications": "全論文",
+    "wechat": "WeChat",
+    "language": "言語",
+    "toggleTheme": "ダークモードを切り替え",
+    "personalSite": "個人サイトへ",
+    "generatingPdf": "生成中...",
+    "name": "米糊 / RicePasteM",
+    "location": "所在地",
+    "locationValue": "中国"
   },
   "locale": {
     "label": "言語",
