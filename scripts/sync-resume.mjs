@@ -40,7 +40,7 @@ export function validateManifest(manifest) {
 async function download(url) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const response = await fetch(url, { signal: AbortSignal.timeout(60_000) })
+      const response = await fetch(url, { signal: AbortSignal.timeout(180_000) })
       if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`)
       return Buffer.from(await response.arrayBuffer())
     } catch (error) {
@@ -57,7 +57,7 @@ async function save(path, content) {
 
 export async function synchronize(destination = root, get = download) {
   const resume = extractResume((await get(SOURCE_URL)).toString())
-  // Download fonts at build time so PDF export stays independent of the origin.
+  // Reuse cached fonts when the source manifest matches; download updates only.
   for (const font of ['songti-sc-regular', 'songti-sc-bold']) {
     const prefix = `fonts/chunks/${font}/`
     const manifestBytes = await get(new URL(`${prefix}manifest.json`, SOURCE_URL))
