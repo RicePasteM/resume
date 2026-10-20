@@ -1,6 +1,6 @@
 import { mkdir, readFile, stat, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 import { createHash } from 'node:crypto'
 import { parse } from 'devalue'
 import { collectResumeStrings } from '../app/utils/resumeLocale.js'
@@ -120,6 +120,6 @@ export async function synchronize(destination = root, get = download) {
   console.log(`Synced ${resume.name}: ${resume.sections.length} sections (${metadata.sha256.slice(0, 12)})`)
 }
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === fileURLToPath(new URL(`file://${process.argv[1]}`))) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   await synchronize()
 }
