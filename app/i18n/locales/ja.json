@@ -1,0 +1,41 @@
+{
+  "resume": {
+    "title": "レジュメ - RicePasteM's Cafe",
+    "description": "RicePasteMのレジュメ版ホームページ。スキル、経験、プロジェクト、連絡先を含みます。",
+    "print": "プリント",
+    "getPdf": "PDFを取得",
+    "generatePdfFailed": "PDFの生成に失敗しました。しばらくしてからもう一度お試しください。",
+    "kicker": "Resume Version",
+    "role": "AIとインターネット製品分野のフロントエンド開発者",
+    "summary": "プロダクト体験、フロントエンドエンジニアリング、コンテンツシステムに注力し、AIツールが実際のワークフローにどう組み込まれるかを探求しています。このバージョンでは、サイト内のプロジェクト、技術スタック、連絡先を、迅速な評価に適したレジュメビューにまとめています。",
+    "contact": "連絡先",
+    "email": "メールアドレス",
+    "experience": "経験概要",
+    "experienceProductPeriod": "現在",
+    "experienceProductTitle": "AI・インターネット製品関連業務",
+    "experienceProductDesc": "製品と技術が交差するシーンに携わり、要件の分解、インタラクション体験、プロトタイプ検証、フロントエンド実装に注力。",
+    "experienceIndependentPeriod": "長期",
+    "experienceIndependentTitle": "個人プロジェクトとコンテンツプラットフォームの維持",
+    "experienceIndependentDesc": "個人サイト、プロジェクト紹介、ブログ、生活近況システムを継続的に維持し、フロントエンド、バックエンド、コンテンツ管理、デプロイフローをカバー。",
+    "skills": "スキルスタック",
+    "selectedProjects": "厳選プロジェクト",
+    "fallbackProjectDesc": "個人コンテンツとプロジェクトのプラットフォーム。ブログ、生活近況、プロジェクト紹介、アバウトページを統合。",
+    "generatingPdf": "生成中...",
+    "name": "米糊 / RicePasteM",
+    "location": "所在地",
+    "locationValue": "中国",
+    "equalContribution": "† 同等貢献",
+    "noMatchingPublications": "該当する論文はありません",
+    "expandPublicationPoints": "要点を展開",
+    "viewAllPublications": "全論文を表示（{count}件）",
+    "featuredPublications": "注目論文",
+    "allPublications": "全論文"
+  },
+  "locale": {
+    "label": "言語",
+    "zhCN": "簡体中文",
+    "zhTW": "繁体字中国語",
+    "en": "English",
+    "ja": "日本語"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "resume": {
+    "title": "Resume - RicePasteM's Cafe",
+    "description": "RicePasteM's resume homepage, containing skills, experience, projects, and contact info",
+    "print": "Print",
+    "getPdf": "Get PDF",
+    "generatingPdf": "Generating...",
+    "generatePdfFailed": "PDF generation failed, please try again later",
+    "kicker": "Resume Version",
+    "name": "Rice Paste / RicePasteM",
+    "role": "Frontend developer focused on AI and internet products",
+    "summary": "Focuses on product experience, frontend engineering, and content systems, while continuously exploring how AI tools can integrate into real workflows. This version organizes projects, tech stack, and contact info into a resume view for quick assessment.",
+    "contact": "Contact",
+    "location": "Location",
+    "locationValue": "China",
+    "email": "Email",
+    "experience": "Experience Overview",
+    "experienceProductPeriod": "Current",
+    "experienceProductTitle": "AI / Internet Product Work",
+    "experienceProductDesc": "Involved in product-technology intersections, focusing on requirement breakdown, interaction design, prototype validation, and frontend implementation.",
+    "experienceIndependentPeriod": "Long-term",
+    "experienceIndependentTitle": "Independent Projects and Content Platform Maintenance",
+    "experienceIndependentDesc": "Continuously maintain personal website, project showcase, blog, and life updates system, covering frontend, backend, content management, and deployment.",
+    "skills": "Tech Stack",
+    "selectedProjects": "Selected Projects",
+    "fallbackProjectDesc": "Personal content and project platform integrating blog, life updates, project showcase, and about page.",
+    "equalContribution": "† Equal contribution",
+    "noMatchingPublications": "No publications match this filter",
+    "expandPublicationPoints": "Expand key points",
+    "viewAllPublications": "View all papers ({count})",
+    "featuredPublications": "Featured papers",
+    "allPublications": "All papers"
+  },
+  "locale": {
+    "label": "Language",
+    "zhCN": "Simplified Chinese",
+    "zhTW": "Traditional Chinese",
+    "en": "English",
+    "ja": "Japanese"
+  }
+}

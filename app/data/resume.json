@@ -1,0 +1,1706 @@
+{
+  "id": 1,
+  "name": "胡张驰 | Zhangchi Hu ",
+  "headline": "高效视觉感知模型 / 多模态视频扩散模型 / 全栈软件开发",
+  "summary": "我是胡张驰 (RicePasteM)，中国科学技术大学信息科学与技术学院博士生，师从孙晓艳教授。我的研究方向聚焦于前沿计算机视觉，主要关注高效视觉感知模型与多模态视频扩散模型。我能够独立完成先进人工智能系统的方法设计与实际部署，具备开发与维护复杂软件系统和跨端应用的丰富经验。",
+  "phone": "huzhangchi2002",
+  "email": "huzhangchi@mail.ustc.edu.cn",
+  "website": "ricepastem.cafe",
+  "github": "github.com/RicePasteM",
+  "location": "中国合肥",
+  "is_active": true,
+  "created_at": "2026-07-03T02:59:14.000Z",
+  "updated_at": "2026-10-11T08:07:46.000Z",
+  "sections": [
+    {
+      "id": 2,
+      "profile_id": 1,
+      "title": "教育经历",
+      "section_key": "education",
+      "layout_type": "timeline",
+      "sort_order": 10,
+      "is_visible": true,
+      "items": [
+        {
+          "id": 2,
+          "section_id": 2,
+          "title": "信息与通信工程，信息科学技术学院",
+          "subtitle": "全日制学术型博士研究生（直博）",
+          "authors": [],
+          "organization": "中国科学技术大学",
+          "location": "",
+          "start_date": "2024.09",
+          "end_date": "现在",
+          "meta": "",
+          "link_label": "",
+          "link_url": "",
+          "description": "985，C9，双一流；主要研究方向为前沿计算机视觉；2029 年应届生。",
+          "sort_order": 10,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [],
+          "links": []
+        },
+        {
+          "id": 3,
+          "section_id": 2,
+          "title": "软件工程，软件学院",
+          "subtitle": "全日制工学学士",
+          "authors": null,
+          "organization": "合肥工业大学",
+          "location": "",
+          "start_date": "2020.09",
+          "end_date": "2024.06",
+          "meta": "",
+          "link_label": "",
+          "link_url": "",
+          "description": "211，双一流；以综合排名 1/159 (1%) 保研。",
+          "sort_order": 20,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [],
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "profile_id": 1,
+      "title": "技术与专长",
+      "section_key": "skills",
+      "layout_type": "skills",
+      "sort_order": 20,
+      "is_visible": true,
+      "items": [
+        {
+          "id": 4,
+          "section_id": 3,
+          "title": "高效视觉感知模型",
+          "subtitle": "",
+          "authors": [],
+          "organization": "",
+          "location": "",
+          "start_date": "",
+          "end_date": "",
+          "meta": "",
+          "link_label": "",
+          "link_url": "",
+          "description": "我围绕特征冗余、稀疏注意力、查询优化与实时推理研究前沿视觉感知模型的效率，兼顾复杂场景下的识别精度与部署成本。代表项目包括 D-FINE、RiO-DETR 与 Dome-DETR，分别面向多种场景下的实时目标检测，并具备跨模态视觉检测与视觉检索系统的研究实践。",
+          "sort_order": 10,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [],
+          "links": []
+        },
+        {
+          "id": 29,
+          "section_id": 3,
+          "title": "多模态视频扩散模型",
+          "subtitle": "",
+          "authors": [],
+          "organization": "",
+          "location": "",
+          "start_date": "",
+          "end_date": "",
+          "meta": "",
+          "link_label": "",
+          "link_url": "",
+          "description": "我围绕视频扩散模型的生成与编辑、少步蒸馏、时空表征与多模态条件控制开展研究，探索融合几何、运动与语义的世界模型，兼顾生成质量、推理效率与场景一致性。代表工作包括 PREX，并参与 DeCo-VAE 与 MUSE，具备从数据构建、模型训练到系统部署的完整实践经验。",
+          "sort_order": 20,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [],
+          "links": []
+        },
+        {
+          "id": 7,
+          "section_id": 3,
+          "title": "全栈软件开发",
+          "subtitle": "",
+          "authors": [],
+          "organization": "",
+          "location": "",
+          "start_date": "",
+          "end_date": "",
+          "meta": "",
+          "link_label": "",
+          "link_url": "",
+          "description": "我致力于将算法与产品需求转化为可持续运行的软件系统，熟悉 Vue / Nuxt、Node.js、Python、数据库与桌面开发技术，在推理系统优化、前后端开发、多端应用构建、产品部署与长期维护方面具有完整实践经验。",
+          "sort_order": 40,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [],
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "profile_id": 1,
+      "title": "论文",
+      "section_key": "publications",
+      "layout_type": "timeline",
+      "sort_order": 30,
+      "is_visible": true,
+      "items": [
+        {
+          "id": 12,
+          "section_id": 4,
+          "title": "RiO-DETR: DETR for Real-time Oriented Object Detection",
+          "subtitle": "RiO-DETR：面向实时有向目标检测的 DETR 框架",
+          "authors": [
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Yifan Zhao",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Yansong Peng",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Wenzhang Sun",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jie Chen",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Peixi Wu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xinghao Wang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiangchen Yin",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Dongsheng Jiang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Hebei Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2026",
+          "end_date": "",
+          "meta": "ECCV 2026 Spotlight Oral | 计算机视觉顶会 | CCF-B",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 10,
+          "is_visible": true,
+          "is_featured": true,
+          "points": [
+            {
+              "id": 14,
+              "item_id": 12,
+              "content": "提出**首个面向实时旋转目标检测的端到端 DETR 框架 RiO-DETR**，用于实现*高效有向目标检测*。通过**内容驱动角度估计**将角度从位置查询中解耦，结合**旋转校正正交注意力**捕获轴向与横向互补特征，同时采用*解耦周期细化*和*最短路径周期损失*稳定跨角度边界的优化，并引入 **Oriented Dense O2O** 增强角度监督多样性、加速角度收敛。",
+              "sort_order": 0
+            },
+            {
+              "id": 15,
+              "item_id": 12,
+              "content": "相比现有实时旋转检测模型，**RiO-DETR** 在 **DOTA-1.0** 单尺度测试中达到 *81.8 AP50 / 29.9 ms*，在 **DIOR-R** 上达到 *77.43 AP50 / 17.31 ms*，在 **FAIR-1M-2.0** 上达到 *47.4 AP50 / 29.9 ms*，均展现出*更优的速度—精度权衡*，在保持*端到端、实时推理能力*的同时提升了旋转目标检测性能。",
+              "sort_order": 10
+            }
+          ],
+          "links": [
+            {
+              "id": 3,
+              "item_id": 12,
+              "label": "arXiv:2603.09411",
+              "url": "https://arxiv.org/abs/2603.09411",
+              "sort_order": 0,
+              "is_visible": true
+            },
+            {
+              "id": 4,
+              "item_id": 12,
+              "label": "GitHub Repo",
+              "url": "https://github.com/RicePasteM/RiO-DETR",
+              "sort_order": 10,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "section_id": 4,
+          "title": "Preserve, Reveal, Expand: Towards Faithful 4D Video Editing with Region-Aware Conditioning and Benchmarking",
+          "subtitle": "保留、揭示、扩展：迈向基于区域感知条件控制的高保真 4D 视频编辑与评估",
+          "authors": [
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Wenzhang Sun",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiangchen Yin",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jiahui Yuan",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Chunfeng Wang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Hao Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Kun Zhan",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2026",
+          "end_date": "",
+          "meta": "Arxiv 2026",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 20,
+          "is_visible": true,
+          "is_featured": true,
+          "points": [
+            {
+              "id": 16,
+              "item_id": 13,
+              "content": "识别 4D 编辑中的**证据-角色失配**问题，提出区域感知框架 **PREX**：将目标时空体分解为 Preserve/Reveal/Expand 三种角色（互斥完备），对每个目标像素回溯编辑后 4D 点至源帧检索观测颜色，经覆盖度×纯净度×深度稳定性×视角一致性计算**几何感知置信度**，连同角色掩码经**区域感知适配器**注入冻结的 Wan2.1-I2V 主干。",
+              "sort_order": 0
+            },
+            {
+              "id": 17,
+              "item_id": 13,
+              "content": "提出**自监督代理任务课程**（Preserve 重构 / Reveal 消 occlusion / Expand 部分观测三变体，10,000 对混合训练，配合几何退化与外观抖动增强），仅用普通视频学习保持、补全与外推，**无需成对编辑监督**；同步发布诊断基准 **PREBench**：350 案例（150 仅相机 + 200 相机-物体联合）与人工核验的区域掩码，配 9 项区域感知指标（P-LPIPS/R-Ghost/E-Temp 等），与人类偏好一致率 66.7–83.3%。",
+              "sort_order": 10
+            },
+            {
+              "id": 66,
+              "item_id": 13,
+              "content": "仅相机设置 PREBench Score **60.98** 最高（超 Vista4D 57.21、NeoVerse 56.61），全集 **61.45** 远超 GEN3C 54.59，VBench **77.99** 全场最高；消融验证各组件互补——外观线索损失 P-LPIPS +78.8%（0.2137→0.3821）、角色掩码损失 R-Ghost +16.3%/E-Seam +25.0%、置信度损失 E-Temp +31.8%、代理任务损失 E-Temp +68.8%，完整模型较 Plain ControlNet 基线 P-LPIPS **-45.6%**、R-Ghost **-27.3%**、E-Temp **-51.7%**、E-Seam **-39.4%**。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 5,
+              "item_id": 13,
+              "label": "arXiv:2605.20961",
+              "url": "https://arxiv.org/abs/2605.20961",
+              "sort_order": 0,
+              "is_visible": true
+            },
+            {
+              "id": 6,
+              "item_id": 13,
+              "label": "Project Page",
+              "url": "https://ricepastem.github.io/PREX-Open/",
+              "sort_order": 10,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "section_id": 4,
+          "title": "MeowID: A Dual-Expert Retrieval System for Individual Cat Identification",
+          "subtitle": "MeowID：面向个体猫识别的双专家检索系统",
+          "authors": [
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": true
+            },
+            {
+              "name": "Yi Shang",
+              "is_self": false,
+              "is_co_first": true
+            },
+            {
+              "name": "Haocheng Yang",
+              "is_self": false,
+              "is_co_first": true
+            },
+            {
+              "name": "Qiwei Hu",
+              "is_self": false,
+              "is_co_first": true
+            },
+            {
+              "name": "Yuzheng Li",
+              "is_self": false,
+              "is_co_first": true
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2026",
+          "end_date": "",
+          "meta": "Technical Report 2026 | Online Project",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 30,
+          "is_visible": true,
+          "is_featured": true,
+          "points": [
+            {
+              "id": 30,
+              "item_id": 18,
+              "content": "提出双专家检索系统 **MeowID**，面向非受控场景下的个体猫识别：采用**猫脸优先路由**设计，检测到可用对齐猫脸时以**人脸专家**为主嵌入，并经**验证引导的全身提示融合**补充全局外观线索，无可用脸时回退到**全身专家**；双专家均基于 DINOv3 ViT-B/16，以 Sub-center ArcFace + batch-hard triplet 联合训练，配合**动态教师更新与一致性模型选择**保证训练提示与部署推理参数严格一致，且路线专属嵌入库支持**免重训练注册新个体**。",
+              "sort_order": 0
+            },
+            {
+              "id": 31,
+              "item_id": 18,
+              "content": "构建开源个体猫检索基准 **ICW（Individual Cats in the Wild）**：从 6 个领养/救助平台收集 **82,791 张图像、19,877 个个体**，经 LLM 档案过滤、单猫检测、SAM 前景分割、哈希去重与人工复核的多阶段清洗，采用**身份互斥划分**并标注人脸可用性（95.86%），中位数每身份仅 4 张图，贴合真实低样本长尾场景。",
+              "sort_order": 10
+            },
+            {
+              "id": 32,
+              "item_id": 18,
+              "content": "在 ICW 全测试集上取得 **Top-1** *75.93%*、**mAP** *80.45%*，较最强基线 PetFace (ECCV 2024) 提升 *4.07/2.37 pp*；跨 **13 个动物科属**的 PetFace 验证平均 *AUC* 达 *94.94%*，超越 PetFace-ArcFace *3.64 pp* 且在全部科属领先；系统经 TensorRT FP16 部署后端到端延迟 **60 ms/图**（16.66 img/s），支持在线识别应用，并与中山大学猫协“笃行猫谱”展开长期项目合作。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 9,
+              "item_id": 18,
+              "label": "ResearchSquare:10881972",
+              "url": "https://www.researchsquare.com/article/rs-10881972/latest.pdf",
+              "sort_order": 0,
+              "is_visible": true
+            },
+            {
+              "id": 10,
+              "item_id": 18,
+              "label": "GitHub Repo",
+              "url": "https://github.com/RicePasteM/MeowID",
+              "sort_order": 10,
+              "is_visible": true
+            },
+            {
+              "id": 14,
+              "item_id": 18,
+              "label": "Website",
+              "url": "https://meowid.net/",
+              "sort_order": 20,
+              "is_visible": true
+            },
+            {
+              "id": 15,
+              "item_id": 18,
+              "label": "Project Page",
+              "url": "https://ricepastem.github.io/MeowID/",
+              "sort_order": 30,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "section_id": 4,
+          "title": "Q-Probe: Scaling Image Quality Assessment to High Resolution via Context-Aware Agentic Probing",
+          "subtitle": "Q-Probe：基于上下文感知智能体探测的高分辨率图像质量评估扩展方法",
+          "authors": [
+            {
+              "name": "Xiang Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xueheng Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Yu Wang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xuanhua He",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Weiwei Yu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Chengjun Xie",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2026",
+          "end_date": "",
+          "meta": "NeurIPS 2026 | CCF-A",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 40,
+          "is_visible": true,
+          "is_featured": true,
+          "points": [
+            {
+              "id": 27,
+              "item_id": 17,
+              "content": "提出首个面向**高分辨率图像质量评估（IQA）**的智能体框架 **Q-Probe**，基于 \"Thinking with Images\" 范式模拟人类“全局感知 → 局部审视 → 批判思考”的主动观看机制；针对现有 RL-based IQA 依赖全局视图、以及朴素放大带来的“裁剪即低质量”虚假因果偏差与将自然景深误判为失真的逻辑崩塌问题，设计**上下文感知裁剪策略**（同时覆盖失真区域与正常参考区域），并以**解耦奖励机制**（准确性 *R_acc* + 定位 *R_loc* + 格式 *R_format*）将打分策略与定位策略解耦优化。",
+              "sort_order": 0
+            },
+            {
+              "id": 28,
+              "item_id": 17,
+              "content": "构建首个面向高分辨率细粒度局部失真的评测基准 **Vista-Bench**，利用小波变换解耦图像结构与纹理、在纹理丰富区域注入真实失真，并由 6 位专家进行分层加权标注；配套构建 **Probe-CoT-3K** 与 **Probe-RL-4K** 数据集，支撑“低分辨率 RL 预训练 → 混合分辨率 SFT 预热 → 解耦后 RL 精修”的**三阶段渐进式训练课程**，逐步对齐人类偏好、建立工具调用逻辑并恢复定位精度。",
+              "sort_order": 10
+            },
+            {
+              "id": 29,
+              "item_id": 17,
+              "content": "基于 **Qwen-2.5-VL-7B** 在 8×A100 上完成训练与评估，于 **Vista-Bench** 及 KonIQ-10k、SPAQ、KADID-10k、PIPAL、AGIQA-3K 等标准基准上均取得 **SOTA** 表现，Vista-Bench 上 *SRCC* 达 **0.801**；消融实验验证三阶段课程与裁剪覆盖策略的必要性（裁剪策略从仅失真区域到上下文感知可将 *SRCC* 从 0.578 提升至 0.801），并在低分辨率基准上保持一致增益，实现跨分辨率尺度的鲁棒泛化。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 8,
+              "item_id": 17,
+              "label": "arXiv:2601.15356",
+              "url": "https://arxiv.org/abs/2601.15356",
+              "sort_order": 0,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "section_id": 4,
+          "title": "Meerkat-VL: Implicit Risk Safety Alignment in Multimodal LLMs via Perceptual Reasoning and Self-Verification",
+          "subtitle": "Meerkat-VL：基于感知推理与自验证的多模态大模型隐式风险安全对齐",
+          "authors": [],
+          "organization": "",
+          "location": "",
+          "start_date": "2026",
+          "end_date": "",
+          "meta": "ICML 2026 | CCF-A",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 50,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 63,
+              "item_id": 28,
+              "content": "针对现有安全对齐在隐式风险场景的**数据稀缺与奖励作弊**两大瓶颈，提出 MLLM 安全对齐框架 **Meerkat-VL**（基于 GRPO）：发布首个含隐式风险细粒度标注的训练集 **Meerkat-Safe**（8,436 样本，10 大类 50 子类），经**多智能体循环验证管线**（风险规划/图像获取/质检/风险评估四智能体 + Model Bag 跨模型去偏 + 人工审核）构建。",
+              "sort_order": 0
+            },
+            {
+              "id": 64,
+              "item_id": 28,
+              "content": "设计**规范感知自验证 NPSV**：模型先感知推理再响应，随后按显式规则自评四维分数（风险/意图感知 + 答案安全/有用性），将稀疏黑盒奖励转为透明过程感知信号，配合 **Logit-Based Reward Softening**（softmax 期望替代硬 max 解码）提供更平滑梯度；提出**双目标感知一致性对齐 DPCA**，以一致性惩罚 max(0, s_as−s_ps)+max(0, s_ah−s_ph) 惩罚“安全模板但缺真实风险感知”的回答，理论证明其梯度重定向使准确风险感知成为奖励提升的必要瓶颈（∆ρ>0）。",
+              "sort_order": 10
+            },
+            {
+              "id": 65,
+              "item_id": 28,
+              "content": "实验：Qwen2.5-VL-7B 平均安全 **55.10%→94.44%**、有用性 73.72%→**93.96%**，隐式基准 MSSBench **88.33%**、SIUO **89.68%**（隐式任务安全增益 **32%**）；NPSV 奖励准确率 92.2%/89.5%，显著优于 28K 偏好数据训练的传统 RM（77.1%/76.2%）；免去奖励模型训练使总成本 **-16.93%**（6.87h vs 8.27h），推理仅 +84.5 token。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 26,
+              "item_id": 28,
+              "label": "GitHub Repo",
+              "url": "https://github.com/Tunanzzz/Meerkat-VL",
+              "sort_order": 0,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "section_id": 4,
+          "title": "VaME: Exploring Variational Latent Reasoning for Multimodal Embeddings",
+          "subtitle": "VaME：面向多模态嵌入的变分潜推理探索",
+          "authors": [
+            {
+              "name": "Peixi Wu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Mingzhou Jiang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Feipeng Ma",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Biao Yang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Yunhao Zhou",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Wei Yuan",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Bosong Chai",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Huizu Lin",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jie Chen",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Fan Yang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Wenwu Ou",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Hebei Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2026",
+          "end_date": "",
+          "meta": "Arxiv 2026",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 60,
+          "is_visible": true,
+          "is_featured": true,
+          "points": [
+            {
+              "id": 55,
+              "item_id": 26,
+              "content": "提出多模态嵌入框架 **VaME**，将潜推理建模为**轨迹上的可学习分布**（变分潜推理）：以条件高斯替代确定性状态转移，每步将采样的潜动作回馈主干；配合轻量解码器从隐状态重建答案监督轨迹，无需思维链标注。",
+              "sort_order": 0
+            },
+            {
+              "id": 56,
+              "item_id": 26,
+              "content": "设计**两阶段训练**：潜 SFT 对齐检索语义，GRPO 强化学习以检索奖励 + 语义解码奖励精化潜策略；推理时单条轨迹输出单向量，无需文本生成或轨迹搜索。",
+              "sort_order": 10
+            },
+            {
+              "id": 57,
+              "item_id": 26,
+              "content": "**MMEB-V2** 上 VaME-2B/7B 取得 **65.7/69.4**，领先同规模 LaME、UME-R1 等基线；推理密集的 **MRMR** 上取得 **51.4**（6 个子任务第一），并较确定性潜推理方法**加速至少 4.25×**。消融验证 KL 正则（损失最大 1.3 分）与语义解码奖励（MRMR +2.4）的关键作用。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 21,
+              "item_id": 26,
+              "label": "arXiv:2609.33402",
+              "url": "https://arxiv.org/abs/2609.33402",
+              "sort_order": 0,
+              "is_visible": true
+            },
+            {
+              "id": 23,
+              "item_id": 26,
+              "label": "GitHub Repo",
+              "url": "https://github.com/PeppaWu/RIME",
+              "sort_order": 10,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "section_id": 4,
+          "title": "Beyond Chain-of-Thought: Rewrite as a Universal Interface for Generative Multimodal Embeddings",
+          "subtitle": "在思维链之外：“改写”作为生成式多模态嵌入的通用接口",
+          "authors": [
+            {
+              "name": "Peixi Wu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Ke Mei",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Feipeng Ma",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Bosong Chai",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhibin Lan",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Chenxi Zhao",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Shannan Yan",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jie Chen",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Yansong Peng",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Bo Lin",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Junjie Zhou",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Dacheng Yin",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Tianyi Wang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Fengyun Rao",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jing Lyu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Hebei Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2026",
+          "end_date": "",
+          "meta": "ACM Multimedia 2026 | CCF-A",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 70,
+          "is_visible": true,
+          "is_featured": true,
+          "points": [
+            {
+              "id": 45,
+              "item_id": 23,
+              "content": "针对 CoT 驱动生成式嵌入的**推理冗余、目标歧义、推理低效**问题，提出 **RIME**：以检索友好的结构化**改写**替代思维链与总结答案，统一模型内联合优化生成与嵌入；设计**跨模态对齐 CMA** 通过互对比学习桥接生成式/判别式嵌入空间实现互检索，并提出 **Refine-RL** 以判别式嵌入为语义锚、以生成嵌入超越判别嵌入为奖励精化改写。",
+              "sort_order": 0
+            },
+            {
+              "id": 46,
+              "item_id": 23,
+              "content": "构建“Rewrite SFT → Refine-RL”两阶段训练管线，统一处理图像、视频、视觉文档与文本查询的模态感知改写，无需外置 Reasoner 模块。",
+              "sort_order": 10
+            },
+            {
+              "id": 47,
+              "item_id": 23,
+              "content": "**MMEB-V2 / MRMR / UVRB** 三大基准上取得生成式嵌入 **SOTA**：RIME-7B MMEB-V2 综合分 **68.6**（开源最佳，超 UME-R1 +4.1），MRMR **50.2**、UVRB **55.6** 均领先；改写仅用 **212 token**（CoT 为 475），配合 Refine-RL **推理 token 缩减约 52%**；消融验证 Rewrite（+1.9）、CMA、Refine-RL 组件必要性。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 24,
+              "item_id": 23,
+              "label": "arXiv:2604.22280",
+              "url": "https://arxiv.org/abs/2604.22280",
+              "sort_order": 0,
+              "is_visible": true
+            },
+            {
+              "id": 25,
+              "item_id": 23,
+              "label": "GitHub Repo",
+              "url": "https://github.com/PeppaWu/RIME",
+              "sort_order": 10,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "section_id": 4,
+          "title": "MUSE: A Multi-agent Framework for Unconstrained Story Envisioning via Closed-Loop Cognitive Orchestration",
+          "subtitle": "MUSE：基于闭环认知编排的无约束故事构想多智能体框架",
+          "authors": [
+            {
+              "name": "Sun Wenzhang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhenyu Wang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Chunfeng Wang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Hao Li",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2026",
+          "end_date": "",
+          "meta": "ACM Multimedia 2026 Workshop AMI",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 80,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 21,
+              "item_id": 16,
+              "content": "提出面向长篇视听叙事的多智能体闭环编排框架 **MUSE**，将故事生成从“提示→视频”的前馈范式转变为对演化故事状态的**规划–执行–验证–修订**循环：叙事意图被编译为**结构化控制包**（角色身份、空间布局、声音、相机、时间约束），通过剧本分解与身份锚定（含文本驱动 **Vocal Trait Synthesis** 声线锚）、布局感知动态路由与时序状态传播协调各阶段；多模态评论器输出**类型化违规报告**驱动有界局部修订而非无约束重采样，避免长时程语义漂移与跨模态失配。",
+              "sort_order": 0
+            },
+            {
+              "id": 22,
+              "item_id": 16,
+              "content": "引入无参考评测协议 **MUSEBench**（5 题材、30 故事种子、472 镜头单元），从**剧本扩展、视觉一致性、视觉–剧本对齐、声音身份与质量**四维度评估中间故事结构与最终媒体产物，并以 6 名评分者、140 样本的人–指标校准研究验证自动分数可信度（剧本 *r*=0.64、视觉 *r*=0.74、音频 *r*=0.49）。",
+              "sort_order": 10
+            },
+            {
+              "id": 23,
+              "item_id": 16,
+              "content": "在 **ViStoryBench 与 MUSEBench** 上对比 Vlogger、AnimDirector、MMStoryAgent、V-GOT、MovieAgent 等，在**跨镜头身份/风格一致性、剧本扩展、故事落地与音画对齐**等依赖持久状态的维度上最优或具竞争力；消融表明**可执行规划与类型化反馈互补**（完整模式身份与落地指标最强），上下文滑动窗口改善跨镜头动作连续性、自适应相机控制缓解身份泄漏，并分析拥挤多角色场景与细粒度语音表现力等残留局限。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 7,
+              "item_id": 16,
+              "label": "arXiv:2602.03028",
+              "url": "https://arxiv.org/abs/2602.03028",
+              "sort_order": 0,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "section_id": 4,
+          "title": "DeCo-VAE: Learning Compact Latents for Video Reconstruction via Decoupled Representation",
+          "subtitle": "DeCo-VAE：基于解耦表示的视频重建紧凑潜变量学习",
+          "authors": [
+            {
+              "name": "Xiangchen Yin",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jiahui Yuan",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Wenzhang Sun",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jie Chen",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaozhen Qiao",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Hao Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2025",
+          "end_date": "",
+          "meta": "Arxiv 2025",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 90,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 48,
+              "item_id": 24,
+              "content": "提出解耦式视频 VAE 框架 **DeCo-VAE**，针对现有视频 VAE 忽视**帧间内容相似性**导致的潜变量冗余建模问题：借鉴视频编解码思想，将视频显式解耦为**关键帧**（外观锚，保留静态纹理与空间结构）、**运动**（预训练运动模块提取的光流 + 局部尺度场）与**残差**（运动预测未覆盖的细粒度细节）三个语义互斥分量并分别学习专属潜变量表示；设计**三个专用编码器**分别编码各分量以消除特征纠缠，采用**共享 3D 解码器**维持重构时的时空一致性，解码后经与解耦过程对称的**重耦合操作**（*x̂ₜ = 𝒲(x̂₀, m̂ₜ) + r̂ₜ*）恢复视频帧，t-SNE 可视化证实解耦后的潜空间显著更紧凑。",
+              "sort_order": 0
+            },
+            {
+              "id": 49,
+              "item_id": 24,
+              "content": "提出**解耦适应策略**稳定多分量训练：两阶段顺序训练中**选择性冻结**部分模块——第一阶段（40 万步）冻结运动模块以优先夯实静态外观基础，第二阶段（10 万步）冻结关键帧编码器以精化帧间动态建模，共享 3D 解码器全程可训练以维护跨分量一致性；损失函数联合**重构 + KL + 感知 + GAN 对抗项**（40 万步后引入 GAN 提升视觉真实性），在 *4×8×8* 压缩设置下以轻量网络参数实现高保真重构。",
+              "sort_order": 10
+            },
+            {
+              "id": 50,
+              "item_id": 24,
+              "content": "实验验证有效性与下游价值：**WebVid** 数据集上 *PSNR/SSIM/LPIPS/rFVD* 四项指标**全面最优**（超越 OD-VAE、CV-VAE、WF-VAE、VidTwin、LeanVAE 等基线），**Kinetics-400** 验证集上 *PSNR/SSIM/rFVD* 取得第二优；集成至 **Latte** 扩散模型后，在 **UCF-101** 下游视频生成任务上取得 *FVD₁₆* **166.39**（16 通道），优于所有现有方法；消融表明**视频解耦**带来 **+1.40 dB** *PSNR* 增益（29.80→31.20 dB），**解耦适应策略**再带来 **+1.09 dB** 并使 *LPIPS* 下降 **33.8%**（0.0491），相比直接通道拼接三分量（*PSNR* 仅 27.15）专用编码器设计优势显著。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 18,
+              "item_id": 24,
+              "label": "arXiv:2511.14530",
+              "url": "https://arxiv.org/abs/2511.14530",
+              "sort_order": 0,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "section_id": 4,
+          "title": "Look Before You Fuse: 2D-Guided Cross-Modal Alignment for Robust 3D Detection",
+          "subtitle": "融合前先观察：面向鲁棒 3D 检测的 2D 引导跨模态对齐",
+          "authors": [
+            {
+              "name": "Xiang Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Xu Xiao",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Bin Kong",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2025",
+          "end_date": "",
+          "meta": "CVPR 2026 | 计算机视觉顶会 | CCF-A",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 100,
+          "is_visible": true,
+          "is_featured": true,
+          "points": [
+            {
+              "id": 42,
+              "item_id": 22,
+              "content": "揭示 LiDAR-相机 BEV 融合中的特征错位**高度可预测、集中于物体-背景边界**（深度相关投影误差所致），而非随机分布；据此提出 **“Look Before You Fuse”** 原则——在融合前利用 2D 检测先验主动校正几何失配，而非事后补救已错位特征，在 BEVFusion-PKU 基线上构建三模块协同框架，同时修复相机分支**深度监督失真**与跨模态聚合阶段的**特征错配**。",
+              "sort_order": 0
+            },
+            {
+              "id": 43,
+              "item_id": 22,
+              "content": "设计三个协同模块：**先验引导深度校准 PGDC**（深度对齐模块 DAM + 特征增强模块 FEM），以 YOLOv9 检测框定位边界错位区域并对点云做局部平滑、同步增强对应图像特征；**不连续性感知几何融合 DAGF**，通过差异掩码（阈值 *τ*=10%）剔除不可靠深度，再经 20×20 分块统计（*d_avg* 稠密化 + *g_max* 最大梯度）拟合物体-背景边界的深度突变，构成自校正机制（先验准确时修正残余错位、先验错误时回退过度平滑）；**结构引导深度调制器 SGDM**，以门控注意力融合稠密几何表示与增强图像特征并经残差连接保留视觉语义，输出精确逐像素深度分布；配合**边缘关键损失**（梯度图加权 Focal Loss）强化结构边界学习。",
+              "sort_order": 10
+            },
+            {
+              "id": 44,
+              "item_id": 22,
+              "content": "在 **nuScenes 验证集**取得 **SOTA**：*mAP* **71.5%**、*NDS* **73.6%**（推理延迟仅 **+15 ms**），超越 GraphBEV（70.1/72.9）、BEVDiffuser（69.2/71.9）等方法，较基线 BEVFusion-PKU 提升 **+3.6 mAP / +2.6 NDS**；在 **Argoverse2** 上取得竞争力 *mAP* **41.7%**；消融验证三模块增益与 PGDC-DAGF 强协同效应（联合增益超各自单独之和），且方法对 2D 先验质量**高度鲁棒**——随机先验下性能几乎不受损，先验由 YOLOv9 换为真值可进一步提升至 73.5/74.2，表明性能随先验质量可扩展。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 13,
+              "item_id": 22,
+              "label": "arXiv:2507.16861",
+              "url": "https://arxiv.org/abs/2507.16861",
+              "sort_order": 0,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "section_id": 4,
+          "title": "Dome-DETR: DETR with Density-Oriented Feature-Query Manipulation for Efficient Tiny Object Detection",
+          "subtitle": "Dome-DETR：基于密度导向特征—查询处理的高效微小目标检测 DETR 框架",
+          "authors": [
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Peixi Wu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jie Chen",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Huyue Zhu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Yijun Wang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Yansong Peng",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Hebei Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2025",
+          "end_date": "",
+          "meta": "ACM Multimedia 2025 | CCF-A | 100+ Stars",
+          "link_label": "arXiv:2505.05741",
+          "link_url": "https://arxiv.org/abs/2505.05741",
+          "description": "",
+          "sort_order": 110,
+          "is_visible": true,
+          "is_featured": true,
+          "points": [
+            {
+              "id": 2,
+              "item_id": 8,
+              "content": "提出一种基于**密度导向的特征、查询处理**的 DETR 框架 **Dome-DETR**，用于实现*高效微小目标检测*。该方法通过**轻量级密度聚焦提取器**生成密度热力图以减少特征冗余，结合**掩码窗口注意力稀疏化**将计算资源聚焦于有效区域，同时采用*渐进式自适应查询初始化*动态调整查询密度，无需手动调参即可适配不同目标分布场景。",
+              "sort_order": 0
+            },
+            {
+              "id": 3,
+              "item_id": 8,
+              "content": "相比现有模型，在 **AI-TODv2** 测试集上 AP 提升 *3.3%*，**VisDrone** 验证集上 AP 提升 *2.5%*，同时保持**低计算复杂度和紧凑模型尺寸**，实现了**微小目标检测精度与效率的平衡**。",
+              "sort_order": 10
+            }
+          ],
+          "links": [
+            {
+              "id": 1,
+              "item_id": 8,
+              "label": "arXiv:2505.05741",
+              "url": "https://arxiv.org/abs/2505.05741",
+              "sort_order": 0,
+              "is_visible": true
+            },
+            {
+              "id": 2,
+              "item_id": 8,
+              "label": "GitHub Repo",
+              "url": "https://github.com/RicePasteM/Dome-DETR",
+              "sort_order": 10,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "section_id": 4,
+          "title": "DASH: 4D Hash Encoding with Self-Supervised Decomposition for Real-Time Dynamic Scene Rendering",
+          "subtitle": "DASH：面向实时动态场景渲染、结合自监督分解的 4D 哈希编码",
+          "authors": [
+            {
+              "name": "Jie Chen",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Peixi Wu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Huyue Zhu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Hebei Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2025",
+          "end_date": "",
+          "meta": "ICCV 2025 | 计算机视觉顶会 | CCF-A",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 120,
+          "is_visible": true,
+          "is_featured": true,
+          "points": [
+            {
+              "id": 39,
+              "item_id": 21,
+              "content": "提出基于 3DGS 的实时动态场景渲染框架 **DASH**，针对平面法（4DGaussian）**低秩假设导致的特征重叠**与直接 4D 哈希编码全场景应用导致的**哈希碰撞与冗余**问题，设计**自监督动静态分解机制**：利用优化过程中静态/动态元素固有的行为差异（线性运动模型的形变幅度），以 *k* 百分位阈值自动划分分量并施加静态约束损失，无需人工标注或预计算掩码；静态区域用标准 3DGS 重建，仅对动态区域施加**多分辨率 4D 哈希编码器**，经四线性插值与多头解码器预测位置/旋转/缩放形变，规避低秩假设并显著降低哈希表开销。",
+              "sort_order": 0
+            },
+            {
+              "id": 40,
+              "item_id": 21,
+              "content": "提出**时空平滑正则化**抑制显式表示固有的形变伪影：对 4D 坐标施加随机扰动，约束局部邻域内编码特征的时空一致性，保证相邻高斯形变模式平滑；配合对动/静态高斯分别执行的自适应密度控制与不透明度重置机制，构成完整可优化框架（*L*₁ + D-SSIM + 平滑正则）。",
+              "sort_order": 10
+            },
+            {
+              "id": 41,
+              "item_id": 21,
+              "content": "在 **Neural 3D Video**（平均 *PSNR* **32.22 dB**）与 **Technicolor Light Field**（*PSNR* **33.94 dB**）两个真实多视角数据集上取得 **SOTA** 渲染质量，优于 4DGaussian、Grid4D、E-D3DGS 等代表性方法；在单张 RTX 4090 上以 **264 FPS**（分辨率 1352×1014）实现实时渲染，凭借哈希表 *O*(1) 查询与仅建模动态分量的策略，在更少高斯点数与更短训练时间下同时提升质量与速度；消融验证分解、动态密度控制与平滑正则各组件必要性，且分解机制移植至 Grid4D（Grid4D+dec）仍带来显著 *PSNR* 增益，证明了通用性。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 11,
+              "item_id": 21,
+              "label": "arXiv:2507.19141",
+              "url": "https://arxiv.org/pdf/2507.19141",
+              "sort_order": 0,
+              "is_visible": true
+            },
+            {
+              "id": 12,
+              "item_id": 21,
+              "label": "GitHub Repo",
+              "url": "https://github.com/chenj02/DASH",
+              "sort_order": 10,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "section_id": 4,
+          "title": "Efficient Spiking Point Mamba for Point Cloud Analysis",
+          "subtitle": "面向点云分析的高效脉冲 Point Mamba",
+          "authors": [
+            {
+              "name": "Peixi Wu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Bosong Chai",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Menghua Zheng",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Wei Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Jie Chen",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zheyu Zhang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Hebei Li",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2025",
+          "end_date": "",
+          "meta": "ICCV 2025 | 计算机视觉顶会 | CCF-A",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 130,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 36,
+              "item_id": 20,
+              "content": "提出**首个基于 Mamba 的 3D 脉冲神经网络框架 SPM**，针对将 Mamba 直接适配到 SNN 时的**时间动态失配**（连续状态转移 vs. 离散脉冲事件）与**脉冲信息损失**问题：设计**层次化动态编码（HDE）**改进静态直接编码，在 FPS 采样早期（不稳定）与后期（冗余）阶段注入动态机制、保留中间关键信息，将静态点云转为动态事件式表示；提出**脉冲 Mamba 模块（SMB）**，对 Gate 分支与 SSM 分支进行 SNN 定制（SNN 友好门控 + 时间翻转双向 SSM），在保持 Mamba 序列建模能力的同时学习跨时间步特征、抑制脉冲信息损失。",
+              "sort_order": 0
+            },
+            {
+              "id": 37,
+              "item_id": 20,
+              "content": "引入**非对称 SNN-ANN 异构预训练框架**：由 N 个 SMB 堆叠构成脉冲编码器、轻量 ANN SSM 解码器（N_d < N）加速训练，以 Chamfer 距离为重建损失进行掩码建模预训练，首次将**脉冲式预训练**引入 3D SNN 领域；并基于 MAC 4.6 pJ / AC 0.9 pJ 的理论能耗模型分析能效。",
+              "sort_order": 10
+            },
+            {
+              "id": 38,
+              "item_id": 20,
+              "content": "在 **ModelNet40、ScanObjectNN（三个变体）、ShapeNetPart** 上全面超越此前 SOTA SNN：三个 ScanObjectNN 变体分别提升 **+6.2/+6.1/+7.4%** *OA*，ShapeNetPart 实例 *mIoU* 提升 **+1.9%**（82.29% 类别 / 84.8% 实例）；相对 ANN 对应模型 PointMamba，能耗最多降低 **12.6×**（单时间步）/ **3.5×**（4 时间步），在 *OA* 90.2/84.2/92.3% 下能耗仅 5.4 mJ（ANN 为 18.9 mJ）；消融验证 SMB 双分支、TimeFlip 双向策略、HDE 前向滑动+后向扩展及时间步数的有效性，分割与重建可视化与 ANN 对应模型质量相当。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 16,
+              "item_id": 20,
+              "label": "IEEE Xplore",
+              "url": "https://ieeexplore.ieee.org/abstract/document/11445417",
+              "sort_order": 0,
+              "is_visible": true
+            },
+            {
+              "id": 17,
+              "item_id": 20,
+              "label": "GitHub Repo",
+              "url": "https://github.com/PeppaWu/SPM",
+              "sort_order": 10,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "section_id": 4,
+          "title": "MeDKCoOp: Dual Knowledge-guided Graph Prompt Learning for Biomedical Vision-Language Models",
+          "subtitle": "MeDKCoOp：面向生物医学视觉-语言模型的双知识引导图提示学习",
+          "authors": [
+            {
+              "name": "Yijun Wang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Siying Wu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Lubin Gan",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zheyu Zhang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jing Zhang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Huyue Zhu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Peixi Wu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2025",
+          "end_date": "",
+          "meta": "ACM Multimedia 2025 | CCF-A",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 140,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 33,
+              "item_id": 19,
+              "content": "提出面向生物医学视觉-语言模型的**双知识引导图提示学习框架 MeDKCoOp**，针对 CoOp 类提示学习在医学领域**专门知识利用不足、跨模态结构关系建模缺失**的问题，从**文本与视觉双分支**同步挖掘领域专门知识并形式化为**图结构表示**，为下游医学任务的提示优化提供结构化知识先验。",
+              "sort_order": 0
+            },
+            {
+              "id": 34,
+              "item_id": 19,
+              "content": "设计**知识引导的关系迁移机制**实现跨模态融合：以图结构为载体在视觉-文本模态间传递领域知识，通过关系学习过程**动态优化可学习提示**，使 CLIP 类模型在医学图像-文本对齐中获得领域自适应能力，同时保留其零样本泛化优势。",
+              "sort_order": 10
+            },
+            {
+              "id": 35,
+              "item_id": 19,
+              "content": "在**多个生物医学基准**上相比 CoOp 等提示学习基线取得**更优性能**，尤其在 **base-to-new 类别泛化**任务中提升显著，表明该方法在保持基类判别能力的同时改善了新类泛化，验证了结构化知识先验对医学提示学习的有效性。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 27,
+              "item_id": 19,
+              "label": "ACM Digital Library",
+              "url": "https://dl.acm.org/doi/epdf/10.1145/3746027.3755135",
+              "sort_order": 0,
+              "is_visible": true
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "section_id": 4,
+          "title": "Motion-Guided Latent Diffusion For Full-Frame Video Stabilization",
+          "subtitle": "运动引导的潜空间扩散全帧视频稳定",
+          "authors": [
+            {
+              "name": "Huyue Zhu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Dachun Kai",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jiaxiao Wang",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Jie Chen",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Zhangchi Hu",
+              "is_self": true,
+              "is_co_first": false
+            },
+            {
+              "name": "Quanquan Hu",
+              "is_self": false,
+              "is_co_first": false
+            },
+            {
+              "name": "Xiaoyan Sun",
+              "is_self": false,
+              "is_co_first": false
+            }
+          ],
+          "organization": "",
+          "location": "",
+          "start_date": "2025",
+          "end_date": "",
+          "meta": "ICIP 2026 | CCF-C",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 150,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 60,
+              "item_id": 27,
+              "content": "针对判别式全帧稳定方法（DIFRINT、FuSta、MetaStab）依赖像素传播、无法生成缺失内容而导致的边界剪切/模糊伪影，提出运动感知生成式框架 **StabDiff**，利用潜扩散模型先验对边界缺失区域进行高质量重建，保留完整视场（C=1.00）。",
+              "sort_order": 0
+            },
+            {
+              "id": 61,
+              "item_id": 27,
+              "content": "设计两大运动感知组件：**时序运动引导 TMG** 借助平滑相机轨迹得到稀疏运动场，经运动引导扭曲生成粗对齐帧作结构引导，解耦全局运动补偿与内容生成，其 **ALA 策略**以可训练轻量编码器将像素空间扭曲帧投影至 LDM 冻结 VAE 潜空间对齐的表示，避免直接注入的域差距伪影；**生成式边界修补器 GBI** 通过 RAFT 光流对齐前后 3 帧并加遮挡掩码做遮挡感知融合，经 ControlNet 多尺度注入冻结 U-Net，合成时空一致的边界内容。",
+              "sort_order": 10
+            },
+            {
+              "id": 62,
+              "item_id": 27,
+              "content": "在 **NUS、Selfie、DeepStab** 三个基准上整体最优：Selfie/DeepStab 稳定性最高（0.91/0.88）、NUS/DeepStab 失真最低（0.96/0.94），NIQE/NRQM 感知质量全面领先（NIQE 3.55/4.86/4.09）；消融验证各组件必要性：去 ALA 失真降至 0.679（剪切伪影）、去 TMG 稳定性降至 0.847、去 GBI 与遮挡融合分别引发模糊与鬼影。",
+              "sort_order": 20
+            }
+          ],
+          "links": [
+            {
+              "id": 22,
+              "item_id": 27,
+              "label": "IEEE Xplore",
+              "url": "https://ieeexplore.ieee.org/abstract/document/11630249",
+              "sort_order": 0,
+              "is_visible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "profile_id": 1,
+      "title": "研究与产业经历",
+      "section_key": "projects",
+      "layout_type": "timeline",
+      "sort_order": 40,
+      "is_visible": true,
+      "items": [
+        {
+          "id": 14,
+          "section_id": 5,
+          "title": "基于 4D 表征的视频生成与编辑基座模型优化",
+          "subtitle": "",
+          "authors": [],
+          "organization": "理想汽车",
+          "location": "",
+          "start_date": "2025.12",
+          "end_date": "2026.07",
+          "meta": "基座模型算法实习生",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 10,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 18,
+              "item_id": 14,
+              "content": "围绕 **4D-based 视频编辑 / 重拍**任务，参与视频生成基座模型的条件控制、数据构建与后训练优化工作；提出区域感知视频编辑框架 **PREX**，提升相机控制、物体运动编辑等场景下的内容保持、遮挡补全与视野外扩展质量。搭建 4D 视频编辑数据处理与训练数据生成流水线，清洗**高质量视频数据与 4D 表征**，并构造 RGB 线索、置信度图、区域掩码等几何条件数据，设计数据增强方案支撑模型分阶段训练、消融实验与推理评估；",
+              "sort_order": 0
+            },
+            {
+              "id": 19,
+              "item_id": 14,
+              "content": "探索**基于强化学习的视频生成后训练方案**，针对代理重建与真实视频重拍质量目标不一致的问题，接入 **VJEPA、Dense VJEPA、4D Align Reward、VLM Reward、HPSv2 / HPSv3** 等多源奖励信号，完成基于 **Flow-GPRO** 的训练 pipeline 搭建与主要实验验证，提升视频生成结果的运动一致性、重拍合理性与视觉质量。",
+              "sort_order": 10
+            }
+          ],
+          "links": []
+        },
+        {
+          "id": 9,
+          "section_id": 5,
+          "title": "基于 DETR 的下一代目标检测架构演进",
+          "subtitle": "",
+          "authors": null,
+          "organization": "校企合作",
+          "location": "",
+          "start_date": "2025.01",
+          "end_date": "2025-10",
+          "meta": "与华为云 EI 视觉大模型产品组合作项目",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 20,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 4,
+              "item_id": 9,
+              "content": "设计与开发基于**密度导向的特征、查询处理**的 DETR 框架 **Dome-DETR**，用于实现*高效微小目标检测*，在领域经典数据集上均达到 *SoTA 效果*；",
+              "sort_order": 0
+            },
+            {
+              "id": 5,
+              "item_id": 9,
+              "content": "设计与开发首个基于 DETR 的**实时有向目标检测框架 RiO-DETR**，相较于领域最新方法展现出*显著更优的速度—精度权衡*，在保持*端到端、实时推理能力*的同时提升了旋转目标检测性能；",
+              "sort_order": 10
+            },
+            {
+              "id": 12,
+              "item_id": 9,
+              "content": "基于 **D-FINE** 实现*开放集检测能力*，基于 **CLIP** 提取文本特征，并实现 **Image/Text 特征融合模块**、**Text Embedding 与 Object Query 的对比学习逻辑**，在 LVIS 评测集上的开集检测性能超过*同期行业主流模型*。",
+              "sort_order": 20
+            }
+          ],
+          "links": []
+        },
+        {
+          "id": 10,
+          "section_id": 5,
+          "title": "数字病理全切片智能辅助诊断与分析系统",
+          "subtitle": "",
+          "authors": null,
+          "organization": "校企合作",
+          "location": "",
+          "start_date": "2022.09",
+          "end_date": "2023.09",
+          "meta": "与安徽省立医院、安医大二附院合作项目",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 30,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 6,
+              "item_id": 10,
+              "content": "基于 **Vue、Flask、SpringBoot** 搭建实现**病理全切片数字浏览与标注功能**，提供*区域标注自动拟合*、*浏览路径分析*等特色功能，兼容多种行业主流的*公有及私有格式*，全切片实时浏览效率经认证达*商用级别*。",
+              "sort_order": 0
+            },
+            {
+              "id": 7,
+              "item_id": 10,
+              "content": "基于 **StainGAN** 实现**颜色域变换**，通过*自适应颜色反卷积*实现 HE 参数加权染色处理，实现对病理全切片**染色归一化及风格化后处理功能**，单个 Patch 染色时延低于 *15ms*。",
+              "sort_order": 10
+            },
+            {
+              "id": 8,
+              "item_id": 10,
+              "content": "基于 **CLAM、Trans MIL** 等业内最新方法，对**肠癌 RAS 突变**、**胃癌 TMN 分级**两种病理诊断任务，结合 *10k+ 行业切片数据*训练弱监督判别模型，实现**智能辅助诊断功能**。",
+              "sort_order": 20
+            }
+          ],
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "profile_id": 1,
+      "title": "兴趣",
+      "section_key": "summary",
+      "layout_type": "compact",
+      "sort_order": 50,
+      "is_visible": true,
+      "items": [
+        {
+          "id": 11,
+          "section_id": 6,
+          "title": "兴趣",
+          "subtitle": "",
+          "authors": [],
+          "organization": "",
+          "location": "",
+          "start_date": "",
+          "end_date": "",
+          "meta": "",
+          "link_label": "",
+          "link_url": "",
+          "description": "",
+          "sort_order": 10,
+          "is_visible": true,
+          "is_featured": false,
+          "points": [
+            {
+              "id": 9,
+              "item_id": 11,
+              "content": "工作之余，我也对二次元、音乐、摄影与小说创作感兴趣，有同好的朋友欢迎找我交流。",
+              "sort_order": 0
+            }
+          ],
+          "links": []
+        }
+      ]
+    }
+  ]
+}

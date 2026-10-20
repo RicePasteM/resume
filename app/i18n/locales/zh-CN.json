@@ -1,0 +1,41 @@
+{
+  "resume": {
+    "title": "简历 - RicePasteM's Cafe",
+    "description": "RicePasteM 的简历版主页，包含技能、经历、项目和联系方式",
+    "print": "打印",
+    "getPdf": "获取PDF",
+    "generatingPdf": "生成中...",
+    "generatePdfFailed": "PDF 生成失败，请稍后重试",
+    "kicker": "Resume Version",
+    "name": "米糊 / RicePasteM",
+    "role": "AI 与互联网产品方向的前端开发者",
+    "summary": "关注产品体验、前端工程和内容系统，也持续探索 AI 工具如何进入真实工作流。这个版本把站点中的项目、技术栈和联系方式整理成更适合快速评估的简历视图。",
+    "contact": "联系方式",
+    "location": "所在地",
+    "locationValue": "中国",
+    "email": "邮箱",
+    "experience": "经历概览",
+    "experienceProductPeriod": "当前",
+    "experienceProductTitle": "AI / 互联网产品相关工作",
+    "experienceProductDesc": "参与产品与技术交叉场景，关注需求拆解、交互体验、原型验证与前端落地。",
+    "experienceIndependentPeriod": "长期",
+    "experienceIndependentTitle": "独立项目与内容平台维护",
+    "experienceIndependentDesc": "持续维护个人网站、项目展示、博客和生活动态系统，覆盖前端、后端、内容管理与部署流程。",
+    "skills": "技能栈",
+    "selectedProjects": "精选项目",
+    "fallbackProjectDesc": "个人内容与项目平台，整合博客、生活动态、项目展示和关于页面。",
+    "equalContribution": "† 同等贡献",
+    "noMatchingPublications": "暂无符合条件的论文",
+    "expandPublicationPoints": "展开要点",
+    "viewAllPublications": "查看全部论文（{count}篇）",
+    "featuredPublications": "精选论文",
+    "allPublications": "全部论文"
+  },
+  "locale": {
+    "label": "语言",
+    "zhCN": "简体中文",
+    "zhTW": "繁体中文",
+    "en": "English",
+    "ja": "日本語"
+  }
+}

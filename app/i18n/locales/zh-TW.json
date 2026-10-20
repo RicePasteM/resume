@@ -1,0 +1,41 @@
+{
+  "resume": {
+    "title": "履歷 - RicePasteM's Cafe",
+    "description": "RicePasteM 的履歷版主頁，包含技能、經歷、專案和聯絡方式",
+    "print": "列印",
+    "getPdf": "獲取PDF",
+    "generatingPdf": "生成中...",
+    "generatePdfFailed": "PDF 生成失敗，請稍後重試",
+    "kicker": "Resume Version",
+    "name": "米糊 / RicePasteM",
+    "role": "AI 與網際網路產品方向的前端開發者",
+    "summary": "關注產品體驗、前端工程和內容系統，也持續探索 AI 工具如何進入真實工作流。這個版本把站點中的專案、技術棧和聯絡方式整理成更適合快速評估的履歷視圖。",
+    "contact": "聯絡方式",
+    "location": "所在地",
+    "locationValue": "中國",
+    "email": "電子郵件",
+    "experience": "經歷概覽",
+    "experienceProductPeriod": "當前",
+    "experienceProductTitle": "AI / 網際網路產品相關工作",
+    "experienceProductDesc": "參與產品與技術交叉場景，關注需求拆解、互動體驗、原型驗證與前端落地。",
+    "experienceIndependentPeriod": "長期",
+    "experienceIndependentTitle": "獨立專案與內容平台維護",
+    "experienceIndependentDesc": "持續維護個人網站、專案展示、部落格和生活動態系統，涵蓋前端、後端、內容管理與部署流程。",
+    "skills": "技能棧",
+    "selectedProjects": "精選專案",
+    "fallbackProjectDesc": "個人內容與專案平台，整合部落格、生活動態、專案展示和關於頁面。",
+    "equalContribution": "† 同等貢獻",
+    "noMatchingPublications": "暫無符合條件的論文",
+    "expandPublicationPoints": "展開要點",
+    "viewAllPublications": "查看全部論文（{count}篇）",
+    "featuredPublications": "精選論文",
+    "allPublications": "全部論文"
+  },
+  "locale": {
+    "label": "語言",
+    "zhCN": "簡體中文",
+    "zhTW": "繁體中文",
+    "en": "English",
+    "ja": "日本語"
+  }
+}

@@ -1,0 +1,747 @@
+/* ============================================================
+   Theme tokens for CodesOcean — Monochrome design system
+   严格无彩色：仅使用 #111/#333/#666/#999/#ccc/#e5e5e5/#f5f5f5/#fafafa/#fff
+   深色模式为反转单色（#111 底 / #fafafa 字）
+   ============================================================ */
+
+:root {
+  --color-bg-primary: #fafafa;
+  --color-bg-secondary: rgba(250, 250, 250, 0.96);
+  --color-bg-tertiary: #f5f5f5;
+  --color-bg-input: #ffffff;
+  --color-bg-hover: #f5f5f5;
+  --color-bg-code: #f5f5f5;
+  --color-bg-card: #ffffff;
+  --color-bg-modal: #ffffff;
+  --color-bg-overlay: rgba(17, 17, 17, 0.5);
+
+  --color-text-primary: #111111;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+  --color-text-inverse: #fafafa;
+
+  --color-brand: #111111;
+  --color-brand-light: #333333;
+  --color-brand-bg: rgba(17, 17, 17, 0.06);
+  --color-accent: #111111;
+  --color-accent-bg: rgba(17, 17, 17, 0.06);
+
+  --color-border: #e5e5e5;
+  --color-border-light: #e5e5e5;
+  --color-border-focus: #111111;
+
+  --color-shadow: rgba(17, 17, 17, 0.04);
+  --color-shadow-brand: rgba(17, 17, 17, 0.06);
+
+  --color-footer-bg: #111111;
+  --color-footer-text: #999999;
+
+  --color-tag-bg: #f5f5f5;
+  --color-tag-text: #666666;
+
+  --color-gradient-bg: #f5f5f5;
+
+  /* 单色规范常量 */
+  --mono-radius: 2px;
+  --mono-duration: 200ms;
+  --mono-duration-slow: 400ms;
+  --font-display: Georgia, 'Times New Roman', 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'Source Han Serif SC', 'SimSun', serif;
+
+  --bg-os-track: rgba(17, 17, 17, 0.08);
+  --bg-os-handle: rgba(17, 17, 17, 0.25);
+  --bg-os-handle-hover: rgba(17, 17, 17, 0.45);
+  --bg-os-handle-active: rgba(17, 17, 17, 0.6);
+}
+
+html.dark {
+  --color-bg-primary: #111111;
+  --color-bg-secondary: rgba(17, 17, 17, 0.96);
+  --color-bg-tertiary: #1a1a1a;
+  --color-bg-input: #1a1a1a;
+  --color-bg-hover: #222222;
+  --color-bg-code: #1a1a1a;
+  --color-bg-card: #161616;
+  --color-bg-modal: #161616;
+  --color-bg-overlay: rgba(0, 0, 0, 0.7);
+
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #cccccc;
+  --color-text-muted: #999999;
+  --color-text-inverse: #111111;
+
+  --color-brand: #fafafa;
+  --color-brand-light: #e5e5e5;
+  --color-brand-bg: rgba(250, 250, 250, 0.08);
+  --color-accent: #fafafa;
+  --color-accent-bg: rgba(250, 250, 250, 0.08);
+
+  --color-border: #333333;
+  --color-border-light: #2a2a2a;
+  --color-border-focus: #fafafa;
+
+  --color-shadow: rgba(0, 0, 0, 0.2);
+  --color-shadow-brand: rgba(0, 0, 0, 0.25);
+
+  --color-footer-bg: #0a0a0a;
+  --color-footer-text: #999999;
+
+  --color-tag-bg: #1f1f1f;
+  --color-tag-text: #cccccc;
+
+  --color-gradient-bg: #1a1a1a;
+
+  --bg-os-track: rgba(250, 250, 250, 0.1);
+  --bg-os-handle: rgba(250, 250, 250, 0.3);
+  --bg-os-handle-hover: rgba(250, 250, 250, 0.5);
+  --bg-os-handle-active: rgba(250, 250, 250, 0.6);
+
+  color-scheme: dark;
+}
+
+/* ============================================================
+   Global element overrides
+   ============================================================ */
+
+html.dark body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+}
+
+html.dark .app {
+  background-color: var(--color-bg-primary);
+}
+
+/* Footer */
+html.dark .footer-info {
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+}
+
+html.dark .footer-info a {
+  color: var(--color-footer-text);
+}
+
+/* OverlayScrollbars */
+html.dark .os-scrollbar {
+  --os-track-bg: var(--bg-os-track);
+  --os-handle-bg: var(--bg-os-handle);
+  --os-handle-bg-hover: var(--bg-os-handle-hover);
+  --os-handle-bg-active: var(--bg-os-handle-active);
+}
+
+/* NavBar mobile menu */
+html.dark .navbar-index-mobile-bg,
+html.dark .navbar-nav.mobile-open {
+  background: var(--color-bg-secondary);
+}
+
+/* ============================================================
+   Form elements
+   ============================================================ */
+
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: var(--color-bg-input);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+html.dark input:focus,
+html.dark textarea:focus,
+html.dark select:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 2px 8px var(--color-shadow-brand);
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+html.dark input[type="checkbox"],
+html.dark input[type="radio"] {
+  accent-color: var(--color-brand);
+}
+
+/* ============================================================
+   Loading / Error states
+   ============================================================ */
+
+html.dark .loading-container,
+html.dark .loading-state,
+html.dark .error-container {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+}
+
+html.dark .loading-text,
+html.dark .loading-spinner + p {
+  color: var(--color-text-secondary);
+}
+
+html.dark .loading-spinner {
+  border-color: var(--color-border);
+  border-top-color: var(--color-brand);
+}
+
+/* ============================================================
+   Blog page overrides
+   ============================================================ */
+
+html.dark .page-content {
+  background-color: var(--color-bg-primary) !important;
+}
+
+html.dark .sidebar {
+  background: var(--color-bg-secondary) !important;
+  border-color: var(--color-border) !important;
+  box-shadow: none !important;
+}
+
+html.dark .sidebar:hover {
+  box-shadow: none !important;
+  border-color: var(--color-border-focus) !important;
+}
+
+html.dark .search-input {
+  background: var(--color-bg-input) !important;
+  color: var(--color-text-primary) !important;
+}
+
+html.dark .search-input::placeholder {
+  color: var(--color-text-muted) !important;
+}
+
+html.dark .search-input:focus {
+  background: var(--color-bg-secondary) !important;
+  border-color: var(--color-brand) !important;
+  box-shadow: 0 2px 8px var(--color-shadow-brand) !important;
+}
+
+html.dark .filter-section h3 {
+  color: var(--color-brand) !important;
+  border-bottom-color: var(--color-brand) !important;
+}
+
+html.dark .filter-item:hover {
+  background: var(--color-bg-hover) !important;
+}
+
+html.dark .sidebar .filter-item span:first-of-type {
+  color: var(--color-text-primary) !important;
+}
+
+html.dark .sidebar .filter-item .count {
+  color: var(--color-text-secondary) !important;
+}
+
+html.dark .filter-item:hover::before {
+  background: linear-gradient(90deg, transparent, var(--color-bg-hover), transparent) !important;
+}
+
+html.dark .filter-item::before {
+  background: linear-gradient(90deg, transparent, var(--color-bg-hover), transparent) !important;
+}
+
+html.dark .sort-select {
+  background: var(--color-bg-input) !important;
+  color: var(--color-text-primary) !important;
+  border-color: var(--color-brand) !important;
+}
+
+html.dark .article-item {
+  background: var(--color-bg-card) !important;
+  border-color: var(--color-border-light) !important;
+  box-shadow: none !important;
+}
+
+html.dark .article-item:hover {
+  border-color: var(--color-border-focus) !important;
+  box-shadow: none !important;
+}
+
+html.dark .article-title {
+  color: var(--color-brand) !important;
+}
+
+html.dark .article-summary {
+  color: var(--color-text-secondary) !important;
+}
+
+html.dark .article-tag {
+  background: var(--color-tag-bg) !important;
+  color: var(--color-tag-text) !important;
+}
+
+html.dark .article-meta {
+  color: var(--color-text-muted) !important;
+}
+
+html.dark .article-meta .topped {
+  background: var(--color-text-primary) !important;
+  color: var(--color-bg-primary) !important;
+}
+
+html.dark .page-btn {
+  background: var(--color-brand) !important;
+  color: var(--color-text-inverse) !important;
+}
+
+html.dark .page-btn:disabled {
+  background: var(--color-border) !important;
+  color: var(--color-text-muted) !important;
+}
+
+html.dark .page-info {
+  color: var(--color-text-secondary) !important;
+}
+
+html.dark .pagination {
+  border-top-color: var(--color-border) !important;
+}
+
+/* Blog page article link */
+html.dark .article-link {
+  color: inherit !important;
+}
+
+/* ============================================================
+   Article page overrides
+   ============================================================ */
+
+html.dark .article-container {
+  background-color: var(--color-bg-primary);
+}
+
+html.dark .article-header .article-title {
+  color: var(--color-text-primary);
+}
+
+html.dark .article-meta span {
+  color: var(--color-text-muted);
+}
+
+html.dark .article-body {
+  color: var(--color-text-primary);
+}
+
+html.dark .article-content .content {
+  color: var(--color-text-primary);
+}
+
+html.dark .back-btn-top {
+  color: var(--color-brand);
+}
+
+html.dark .comment-item {
+  border-bottom-color: var(--color-border);
+}
+
+html.dark .comment-author {
+  color: var(--color-text-primary);
+}
+
+html.dark .comment-body {
+  color: var(--color-text-secondary);
+}
+
+html.dark .comment-textarea {
+  background: var(--color-bg-input);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+html.dark .comment-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+html.dark .comments-title {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-border);
+}
+
+html.dark .replying-to {
+  background: var(--color-accent-bg);
+  color: var(--color-text-secondary);
+}
+
+html.dark .submit-comment-btn {
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+}
+
+html.dark .submit-comment-btn:disabled {
+  background: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+html.dark .login-link {
+  color: var(--color-accent);
+}
+
+/* Code blocks in articles */
+html.dark .content pre,
+html.dark .content code {
+  background-color: var(--color-bg-code);
+  color: #c9d1d9;
+}
+
+/* ============================================================
+   Highlight.js monochrome overrides (grayscale semantics)
+   ============================================================ */
+
+html.dark .hljs {
+  background: #1a1a1a;
+  color: #cccccc;
+}
+
+html.dark .hljs-comment,
+html.dark .hljs-quote {
+  color: #666666;
+  font-style: italic;
+}
+
+html.dark .hljs-doctag,
+html.dark .hljs-keyword,
+html.dark .hljs-formula {
+  color: #fafafa;
+  font-weight: 700;
+}
+
+html.dark .hljs-section,
+html.dark .hljs-name,
+html.dark .hljs-selector-tag,
+html.dark .hljs-deletion,
+html.dark .hljs-subst {
+  color: #e5e5e5;
+  font-weight: 700;
+}
+
+html.dark .hljs-literal {
+  color: #e5e5e5;
+}
+
+html.dark .hljs-string,
+html.dark .hljs-regexp,
+html.dark .hljs-addition,
+html.dark .hljs-attribute,
+html.dark .hljs-meta .hljs-string {
+  color: #999999;
+  font-style: italic;
+}
+
+html.dark .hljs-attr,
+html.dark .hljs-variable,
+html.dark .hljs-template-variable,
+html.dark .hljs-type,
+html.dark .hljs-selector-class,
+html.dark .hljs-selector-attr,
+html.dark .hljs-selector-pseudo {
+  color: #cccccc;
+}
+
+html.dark .hljs-number {
+  color: #cccccc;
+}
+
+html.dark .hljs-symbol,
+html.dark .hljs-bullet,
+html.dark .hljs-link,
+html.dark .hljs-meta,
+html.dark .hljs-selector-id,
+html.dark .hljs-title {
+  color: #fafafa;
+}
+
+html.dark .hljs-built_in,
+html.dark .hljs-title.class_,
+html.dark .hljs-class .hljs-title {
+  color: #e5e5e5;
+}
+
+html.dark .hljs-emphasis {
+  font-style: italic;
+}
+
+html.dark .hljs-strong {
+  font-weight: bold;
+}
+
+html.dark .hljs-link {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   About page overrides
+   ============================================================ */
+
+html.dark .profile-card {
+  background: transparent;
+  box-shadow: none;
+}
+
+html.dark .profile-card h1,
+html.dark .profile-card .intro {
+  color: var(--color-text-primary);
+}
+
+html.dark .roll-btn {
+  color: var(--color-text-inverse);
+  border-color: var(--color-brand);
+}
+
+html.dark .roll-btn:hover {
+  background: var(--color-brand-light);
+}
+
+html.dark .social-link {
+  color: var(--color-text-secondary);
+}
+
+html.dark .social-link:hover {
+  color: var(--color-brand);
+}
+
+html.dark .tech-stack-section h3,
+html.dark .font-list-section h3 {
+  color: var(--color-text-primary);
+}
+
+html.dark .about-content .tech-stack-section,
+html.dark .about-content .font-list-section {
+  color: var(--color-text-primary);
+}
+
+/* ============================================================
+   Project page overrides
+   ============================================================ */
+
+html.dark .year-title {
+  color: var(--color-text-primary);
+}
+
+html.dark .project-card {
+  background: var(--color-bg-card);
+  box-shadow: none;
+  border: 1px solid var(--color-border);
+}
+
+html.dark .project-card h3 {
+  color: var(--color-text-primary);
+}
+
+html.dark .project-card p {
+  color: var(--color-text-secondary);
+}
+
+html.dark .project-subname {
+  color: var(--color-text-muted);
+}
+
+html.dark .tech-stack {
+  color: var(--color-brand);
+}
+
+html.dark .link-btn {
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+}
+
+html.dark .link-btn:hover {
+  background: var(--color-brand-light);
+}
+
+html.dark .nav-year-btn {
+  color: var(--color-text-secondary);
+}
+
+html.dark .nav-year-btn.active {
+  color: var(--color-brand);
+}
+
+html.dark .nav-year-btn:hover {
+  color: var(--color-brand);
+}
+
+/* ============================================================
+   Life page overrides
+   ============================================================ */
+
+html.dark .login-prompt {
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
+}
+
+html.dark .login-prompt h3 {
+  color: var(--color-text-primary);
+}
+
+html.dark .login-btn {
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+}
+
+html.dark .date-divider {
+  color: var(--color-text-muted);
+}
+
+html.dark .date-divider::before,
+html.dark .date-divider::after {
+  background: var(--color-border);
+}
+
+html.dark .life-post {
+  background: var(--color-bg-card);
+  box-shadow: none;
+  border: 1px solid var(--color-border);
+}
+
+html.dark .life-post:hover {
+  box-shadow: none;
+  border-color: var(--color-border-focus);
+}
+
+html.dark .post-composer {
+  background: var(--color-bg-card);
+  border-color: var(--color-border);
+}
+
+html.dark .action-btn:hover {
+  background: var(--color-bg-hover);
+}
+
+html.dark .replies-list,
+html.dark .post-actions,
+html.dark .comments-section {
+  border-color: var(--color-border);
+}
+
+html.dark .timeline-sidebar {
+  background: transparent;
+  border-color: var(--color-border);
+}
+
+html.dark .empty-state {
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   Admin page overrides
+   ============================================================ */
+
+html.dark .admin-layout {
+  background-color: var(--color-bg-primary);
+}
+
+html.dark .table-container {
+  background: var(--color-bg-card);
+  border-color: var(--color-border);
+}
+
+html.dark .data-table th {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-border);
+}
+
+html.dark .data-table td {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-border);
+}
+
+html.dark .data-table tbody tr:hover {
+  background: var(--color-brand-bg);
+}
+
+html.dark .modal-content {
+  background: var(--color-bg-modal);
+}
+
+html.dark .modal-header {
+  border-bottom-color: var(--color-border);
+}
+
+html.dark .modal-header h3 {
+  color: var(--color-text-primary);
+}
+
+html.dark .close-btn {
+  color: var(--color-text-muted);
+}
+
+html.dark .close-btn:hover {
+  background: var(--color-bg-hover);
+}
+
+html.dark .filters {
+  background: var(--color-bg-card);
+  border-color: var(--color-border);
+}
+
+html.dark .admin-header {
+  border-bottom-color: var(--color-border);
+}
+
+html.dark .admin-title {
+  color: var(--color-text-primary);
+}
+
+html.dark .page-info {
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   Index page overrides
+   ============================================================ */
+
+html.dark .info {
+  color: var(--color-text-muted);
+}
+
+html.dark .info a {
+  color: var(--color-text-muted);
+}
+
+html.dark .retry-btn {
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+}
+
+/* ============================================================
+   NavBar global adjustments
+   ============================================================ */
+
+html.dark .navbar-nav .nav-link {
+  color: var(--color-text-secondary) !important;
+}
+
+html.dark .navbar .dark-mode-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================================
+   UserAuth modal
+   ============================================================ */
+
+html.dark .user-auth-modal {
+  background: var(--color-bg-modal);
+  color: var(--color-text-primary);
+}
+
+html.dark .user-auth-modal input {
+  background: var(--color-bg-input);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+/* ============================================================
+   Confirm dialog
+   ============================================================ */
+
+html.dark .confirm-dialog {
+  background: var(--color-bg-modal);
+  color: var(--color-text-primary);
+  box-shadow: none;
+  border: 1px solid var(--color-border);
+}

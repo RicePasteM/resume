@@ -1,0 +1,117 @@
+/* 全局字体样式配置 */
+/* 字体已在nuxt.config.ts中配置，此处无需重复定义 */
+
+html,
+body,
+#__nuxt {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.app,
+.main-content {
+  margin: 0;
+  padding: 0;
+}
+
+/* 字体测试样式 */
+.font-test-oppo {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  font-weight: 100;
+}
+
+.font-test-barlow {
+  font-family: 'barlow', sans-serif !important;
+  font-style: normal;
+}
+
+/* 全局字体应用 */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body,
+html,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a,
+button, input, textarea, select,
+.navbar-brand,
+.nav-link,
+.loading-text,
+.error-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 优化字体渲染 */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 确保字体加载时的平滑过渡 */
+.font-loading {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.font-loaded {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ============================================================
+   Monochrome base — 单色设计系统基线
+   ============================================================ */
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.article-title,
+.year-title,
+.comments-title,
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--color-text-primary);
+  color: var(--color-bg-primary);
+}
+
+button,
+input,
+textarea,
+select {
+  border-radius: var(--mono-radius);
+}
+
+a {
+  transition: color var(--mono-duration) ease, border-color var(--mono-duration) ease, opacity var(--mono-duration) ease;
+}
+
+button {
+  transition: background-color var(--mono-duration) ease, color var(--mono-duration) ease, border-color var(--mono-duration) ease, opacity var(--mono-duration) ease;
+}
