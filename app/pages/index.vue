@@ -157,6 +157,7 @@ import { isPublicationSection, filterResumeItems, publicationTags } from '~/util
 import { usePublicationPoints } from '~/composables/usePublicationPoints.js'
 import resumeContent from '~/i18n/resume-content.json'
 import { localizeResume } from '~/utils/resumeLocale.js'
+import { scrollToResumeSection } from '~/utils/resumeScroll.js'
 
 const { t, locale } = useI18n()
 // Expose every locale in the SSR payload so the standalone Pages mirror can
@@ -360,17 +361,9 @@ const scrollToSection = (section) => {
   const element = sectionElements.get(sectionKey(section))
   if (!element) return
 
-  const scrollContainer = document.querySelector('[data-overlayscrollbars-viewport]') || document.querySelector('.os-viewport') || document.scrollingElement || document.documentElement
-  const containerRect = scrollContainer.getBoundingClientRect()
-  const elementRect = element.getBoundingClientRect()
-  const nextTop = scrollContainer.scrollTop + elementRect.top - containerRect.top - 92
-
   activeSectionId.value = sectionKey(section)
   suppressObserverUntil = Date.now() + 1200
-  scrollContainer.scrollTo({
-    top: Math.max(nextTop, 0),
-    behavior: 'smooth',
-  })
+  scrollToResumeSection(element)
 }
 
 const sortedPoints = (points) => {
