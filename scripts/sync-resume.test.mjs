@@ -51,6 +51,13 @@ test('keeps local translations before the source deployment and adopts the sourc
     remoteBundle.locales.en['研究简介'] = 'Updated source translation'
     await synchronize(dir, get)
     assert.equal(JSON.parse(await readFile(join(dir, 'app/i18n/resume-content.json'))).locales.en['研究简介'], 'Updated source translation')
+    // The live API may change before the source's next translation build.
+    // Cached exact-source translations fill gaps without replacing source edits.
+    delete remoteBundle.locales.ja['研究简介']
+    await synchronize(dir, get)
+    const combined = JSON.parse(await readFile(join(dir, 'app/i18n/resume-content.json')))
+    assert.equal(combined.locales.ja['研究简介'], bundle.locales.ja['研究简介'])
+    assert.equal(combined.locales.en['研究简介'], 'Updated source translation')
   } finally { await rm(dir, { recursive: true, force: true }) }
 })
 

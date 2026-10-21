@@ -102,7 +102,8 @@
       "基于 **StainGAN** 实现**颜色域变换**，通过*自适应颜色反卷积*实现 HE 参数加权染色处理，实现对病理全切片**染色归一化及风格化后处理功能**，单个 Patch 染色时延低于 *15ms*。": "基於 **StainGAN** 實現**色彩域轉換**，透過*自適應色彩反卷積*實現 HE 參數加權染色處理，實現對病理全切片**染色正規化及風格化後處理功能**，單一 Patch 染色延遲低於 *15ms*。",
       "基于 **CLAM、Trans MIL** 等业内最新方法，对**肠癌 RAS 突变**、**胃癌 TMN 分级**两种病理诊断任务，结合 *10k+ 行业切片数据*训练弱监督判别模型，实现**智能辅助诊断功能**。": "基於 **CLAM、Trans MIL** 等業界最新方法，對**大腸癌 RAS 突變**、**胃癌 TMN 分級**兩種病理診斷任務，結合 *10k+ 業界切片資料*訓練弱監督判別模型，實現**智慧輔助診斷功能**。",
       "兴趣": "興趣",
-      "工作之余，我也对二次元、音乐、摄影与小说创作感兴趣，有同好的朋友欢迎找我交流。": "工作之餘，我也對二次元、音樂、攝影與小說創作感興趣，有同好的朋友歡迎找我交流。"
+      "工作之余，我也对二次元、音乐、摄影与小说创作感兴趣，有同好的朋友欢迎找我交流。": "工作之餘，我也對二次元、音樂、攝影與小說創作感興趣，有同好的朋友歡迎找我交流。",
+      "工作之余，我也对二次元、音乐、数码产品与小说创作感兴趣，有同好的朋友欢迎找我交流。": "工作之餘，我也對二次元、音樂、數碼產品與小說創作感興趣，有同好的朋友歡迎找我交流。"
     },
     "en": {
       "高效视觉感知模型 / 多模态视频扩散模型 / 全栈软件开发": "Efficient Visual Perception Models / Multimodal Video Diffusion Models / Full-Stack Software Development",
@@ -205,7 +206,8 @@
       "基于 **StainGAN** 实现**颜色域变换**，通过*自适应颜色反卷积*实现 HE 参数加权染色处理，实现对病理全切片**染色归一化及风格化后处理功能**，单个 Patch 染色时延低于 *15ms*。": "Implemented **color domain transformation** based on **StainGAN**, using *adaptive color deconvolution* to achieve HE parameter-weighted staining processing, realizing **staining normalization and stylization post-processing functions** for pathology whole slides, with single Patch staining latency below *15ms*.",
       "基于 **CLAM、Trans MIL** 等业内最新方法，对**肠癌 RAS 突变**、**胃癌 TMN 分级**两种病理诊断任务，结合 *10k+ 行业切片数据*训练弱监督判别模型，实现**智能辅助诊断功能**。": "Based on the latest industry methods such as **CLAM, Trans MIL**, for two pathology diagnostic tasks—**colorectal cancer RAS mutation** and **gastric cancer TMN grading**—combined with *10k+ industry slide data* to train weakly supervised discriminative models, realizing **intelligent auxiliary diagnosis functions**.",
       "兴趣": "Interests",
-      "工作之余，我也对二次元、音乐、摄影与小说创作感兴趣，有同好的朋友欢迎找我交流。": "Outside work, I am also interested in ACG, music, photography, and novel writing. Friends with similar interests are welcome to reach out."
+      "工作之余，我也对二次元、音乐、摄影与小说创作感兴趣，有同好的朋友欢迎找我交流。": "Outside work, I am also interested in ACG, music, photography, and novel writing. Friends with similar interests are welcome to reach out.",
+      "工作之余，我也对二次元、音乐、数码产品与小说创作感兴趣，有同好的朋友欢迎找我交流。": "In my spare time, I enjoy anime and manga, music, digital gadgets, and writing fiction. Feel free to reach out if we share any of these interests."
     },
     "ja": {
       "高效视觉感知模型 / 多模态视频扩散模型 / 全栈软件开发": "高効率視覚知覚モデル / マルチモーダル動画拡散モデル / フルスタックソフトウェア開発",
@@ -308,7 +310,8 @@
       "基于 **StainGAN** 实现**颜色域变换**，通过*自适应颜色反卷积*实现 HE 参数加权染色处理，实现对病理全切片**染色归一化及风格化后处理功能**，单个 Patch 染色时延低于 *15ms*。": "**StainGAN** に基づき**色域変換**を実現し、*適応型カラー反畳み込み*により HE パラメータ重み付き染色処理を実現。病理全スライドの**染色正規化およびスタイル化後処理機能**を実現し、単一 Patch の染色遅延は *15ms* 未満。",
       "基于 **CLAM、Trans MIL** 等业内最新方法，对**肠癌 RAS 突变**、**胃癌 TMN 分级**两种病理诊断任务，结合 *10k+ 行业切片数据*训练弱监督判别模型，实现**智能辅助诊断功能**。": "**CLAM、Trans MIL** など業界最新手法に基づき、**大腸癌 RAS 変異**、**胃癌 TMN 分類**という2つの病理診断タスクに対して、*10k+ の業界スライスデータ*を組み合わせて弱教師あり判別モデルを訓練し、**インテリジェント補助診断機能**を実現。",
       "兴趣": "興味",
-      "工作之余，我也对二次元、音乐、摄影与小说创作感兴趣，有同好的朋友欢迎找我交流。": "仕事の合間には、二次元、音楽、写真撮影、小説創作にも興味があり、同じ趣味の友人はぜひ交流してください。"
+      "工作之余，我也对二次元、音乐、摄影与小说创作感兴趣，有同好的朋友欢迎找我交流。": "仕事の合間には、二次元、音楽、写真撮影、小説創作にも興味があり、同じ趣味の友人はぜひ交流してください。",
+      "工作之余，我也对二次元、音乐、数码产品与小说创作感兴趣，有同好的朋友欢迎找我交流。": "仕事の合間には、アニメ・漫画、音楽、デジタルガジェット、小説の執筆にも興味があります。同じ趣味を持つ方は、ぜひ気軽にお声がけください。"
     }
   }
 }

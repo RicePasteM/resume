@@ -77,7 +77,13 @@ async function save(path, content) {
 export async function synchronize(destination = root, get = download) {
   const { resume, translations: sourceTranslations } = extractResumeSnapshot((await get(SOURCE_URL)).toString())
   const localTranslations = await readFile(join(destination, 'app/i18n/resume-content.json'), 'utf8').then(JSON.parse).catch(() => null)
-  const translations = validateTranslations(resume, sourceTranslations || localTranslations)
+  const translations = validateTranslations(resume, {
+    sourceLocale: 'zh-CN',
+    locales: Object.fromEntries(['zh-TW', 'en', 'ja'].map(locale => [locale, {
+      ...localTranslations?.locales?.[locale],
+      ...sourceTranslations?.locales?.[locale]
+    }]))
+  })
   // Reuse cached fonts when the source manifest matches; download updates only.
   for (const font of ['songti-sc-regular', 'songti-sc-bold']) {
     const prefix = `fonts/chunks/${font}/`
