@@ -6,3 +6,6 @@ dist
 .DS_Store
 public/fonts/chunks/
 .env
+
+# Generated resume PDF font subsets
+public/fonts/resume/

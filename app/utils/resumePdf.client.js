@@ -1,4 +1,5 @@
 import { jsPDF } from 'jspdf'
+import { createPdfFontLoader } from './resumePdfFontLoader.js'
 import { isPublicationSection, publicationAuthorsMarkdown, publicationTags } from './resumePublications.js'
 
 const PAGE = {
@@ -33,69 +34,14 @@ const sortByOrder = (a, b) => {
   return (a.sort_order || 0) - (b.sort_order || 0) || String(a.id || '').localeCompare(String(b.id || ''))
 }
 
-const arrayBufferToBase64 = (buffer) => {
-  const bytes = new Uint8Array(buffer)
-  const chunkSize = 0x8000
-  let binary = ''
+const getFonts = createPdfFontLoader({ compactManifest: 'fonts/resume/manifest.json', files: FONT.files })
 
-  for (let index = 0; index < bytes.length; index += chunkSize) {
-    binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize))
+const loadFont = async (doc, resume, equalContribution) => {
+  const fonts = await getFonts(resume, equalContribution)
+  for (const { style, fileName, data } of fonts) {
+    doc.addFileToVFS(fileName, data)
+    doc.addFont(fileName, FONT.family, style)
   }
-
-  return btoa(binary)
-}
-
-const fetchArrayBuffer = async (url) => {
-  const response = await fetch(url)
-  if (!response.ok) {
-    throw new Error(`Font load failed: ${url} ${response.status}`)
-  }
-
-  return response.arrayBuffer()
-}
-
-const loadChunkedFont = async (font) => {
-  const manifestResponse = await fetch(font.chunkManifest)
-  if (!manifestResponse.ok) {
-    throw new Error(`Font manifest load failed: ${font.chunkManifest} ${manifestResponse.status}`)
-  }
-
-  const manifest = await manifestResponse.json()
-  const baseUrl = new URL('.', new URL(font.chunkManifest, window.location.href))
-  const chunks = []
-  let totalLength = 0
-
-  for (const chunk of manifest.chunks || []) {
-    const buffer = await fetchArrayBuffer(new URL(chunk.file, baseUrl).toString())
-    const bytes = new Uint8Array(buffer)
-
-    chunks.push(bytes)
-    totalLength += bytes.byteLength
-  }
-
-  if (manifest.size && totalLength !== manifest.size) {
-    throw new Error(`Font chunk size mismatch: ${font.fileName}`)
-  }
-
-  const merged = new Uint8Array(totalLength)
-  let offset = 0
-
-  for (const chunk of chunks) {
-    merged.set(chunk, offset)
-    offset += chunk.byteLength
-  }
-
-  return merged.buffer
-}
-
-const loadFont = async (doc) => {
-  for (const [style, font] of Object.entries(FONT.files)) {
-    const fontBase64 = arrayBufferToBase64(await loadChunkedFont(font))
-    doc.addFileToVFS(font.fileName, fontBase64)
-    doc.addFont(font.fileName, FONT.family, style)
-  }
-  doc.addFont(FONT.files.normal.fileName, FONT.family, 'italic')
-  doc.addFont(FONT.files.bold.fileName, FONT.family, 'bolditalic')
   doc.setFont(FONT.family, 'normal')
 }
 
@@ -230,15 +176,13 @@ const shouldAvoidLineStart = (token) => {
 }
 
 const setTextStyle = (doc, size, style = 'normal', color = COLOR.ink) => {
-  doc.setFont(FONT.family, style)
+  doc.setFont(FONT.family, style.includes('bold') ? 'bold' : 'normal')
   doc.setFontSize(size)
   doc.setTextColor(color)
 }
 
 const fontStyleForRun = (run) => {
-  if (run.bold && run.italic) return 'bolditalic'
   if (run.bold) return 'bold'
-  if (run.italic) return 'italic'
   return 'normal'
 }
 
@@ -268,7 +212,7 @@ export const generateResumePdf = async (resume, { equalContribution = '† 同�
     putOnlyUsedFonts: true
   })
 
-  await loadFont(doc)
+  await loadFont(doc, resume, equalContribution)
 
   let y = PAGE.top
   const contentWidth = PAGE.width - PAGE.marginX * 2

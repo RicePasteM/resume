@@ -3,6 +3,7 @@ import { readFile, stat } from 'node:fs/promises'
 import { join } from 'node:path'
 import { createHash } from 'node:crypto'
 import { validateTranslations } from './sync-resume.mjs'
+import { collectPdfCodePoints } from '../app/utils/resumePdfCharacters.js'
 
 const output = '.output/public'
 const base = process.env.NUXT_APP_BASE_URL || '/resume/'
@@ -27,4 +28,10 @@ for (const font of ['songti-sc-regular', 'songti-sc-bold']) {
   const manifest = JSON.parse(await readFile(join(folder, 'manifest.json'), 'utf8'))
   for (const chunk of manifest.chunks) assert.equal((await stat(join(folder, chunk.file))).size, chunk.size)
 }
-console.log(`Verified prerendered profile, ${assets.length} asset references, sync hash and PDF font chunks at ${base}`)
+const compact = JSON.parse(await readFile(join(output, 'fonts/resume/manifest.json'), 'utf8'))
+const coverage = new Set(compact.codePoints)
+assert.ok(collectPdfCodePoints(resume).every(point => coverage.has(point)), 'Compact PDF fonts must cover the complete resume')
+for (const font of Object.values(compact.fonts)) {
+  assert.equal((await stat(join(output, 'fonts/resume', font.file))).size, font.size)
+}
+console.log(`Verified prerendered profile, ${assets.length} asset references, sync hash and compact PDF fonts at ${base}`)

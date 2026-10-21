@@ -9,7 +9,8 @@
     "build": "npm run sync && npm run generate && npm run verify",
     "verify": "node scripts/verify-output.mjs",
     "test": "node --test scripts/*.test.mjs",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "pregenerate": "node scripts/prepare-pdf-fonts.mjs"
   },
   "dependencies": {
     "devalue": "5.9.4",
@@ -17,5 +18,8 @@
     "nuxt": "4.0.3",
     "vue": "3.5.18",
     "vue-router": "4.5.1"
+  },
+  "devDependencies": {
+    "fonteditor-core": "2.6.3"
   }
 }
