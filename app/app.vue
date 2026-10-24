@@ -6,7 +6,6 @@
 
 <script setup>
 import { onMounted } from 'vue'
-const { initLocale } = useI18n()
 const { initDarkMode } = useDarkMode()
-onMounted(() => { initLocale(); initDarkMode() })
+onMounted(() => { initDarkMode() })
 </script>

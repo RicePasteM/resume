@@ -4,7 +4,12 @@ import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { stringify } from 'devalue'
-import { validateResume, extractResume, extractResumeSnapshot, validateTranslations, validateManifest, synchronize } from './sync-resume.mjs'
+import { validateResume, extractResume, extractResumeSnapshot, validateTranslations, validateManifest, synchronize as sync, PUBLISHED_URL } from './sync-resume.mjs'
+
+const synchronize = (dir, get) => sync(dir, url => {
+  if (String(url) === PUBLISHED_URL) throw Object.assign(new Error('Not deployed'), { status: 404 })
+  return get(url)
+})
 
 const profile = { name: 'Test Resume', sections: [{ title: 'Research', items: [{ title: 'Paper', is_featured: true, authors: [{ name: 'Author' }] }] }] }
 const page = `<script type="application/json" id="__NUXT_DATA__">${stringify({ data: { 'active-resume': profile } })}</script>`
@@ -88,5 +93,24 @@ test('failed font downloads leave the previous resume snapshot intact', async ()
       return Buffer.from('incomplete')
     }), /Incomplete font chunk/)
     assert.equal(await readFile(join(dir, 'app/data/resume.json'), 'utf8'), 'previous snapshot')
+  } finally { await rm(dir, { recursive: true, force: true }) }
+})
+
+
+test('uses one published bundle without scraping drafts and fails closed on unavailable or unpublished versions', async () => {
+  const dir = await mkdtemp(join(tmpdir(), 'resume-published-'))
+  const bundle = { resume: profile, translations: { locales: { en: {}, 'zh-TW': {}, ja: {} } }, revision: 'published-v1' }
+  let calls = []
+  try {
+    await sync(dir, async url => {
+      calls.push(String(url))
+      if (String(url) === PUBLISHED_URL) return Buffer.from(JSON.stringify({ code: 200, data: bundle }))
+      return Buffer.from(String(url).endsWith('.json') ? JSON.stringify(manifest) : 'abc')
+    })
+    assert.ok(!calls.includes('https://ricepastem.cafe/resume'))
+    assert.equal(JSON.parse(await readFile(join(dir, 'public/sync.json'))).revision, 'published-v1')
+    await assert.rejects(sync(dir, async () => { throw Object.assign(new Error('outage'), { status: 503 }) }), /outage/)
+    await assert.rejects(sync(dir, async () => Buffer.from(JSON.stringify({ code: 200, data: { ...bundle, resume: null } }))), /valid resume/)
+    assert.deepEqual(JSON.parse(await readFile(join(dir, 'app/data/resume.json'))), profile)
   } finally { await rm(dir, { recursive: true, force: true }) }
 })

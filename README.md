@@ -8,7 +8,7 @@
 
 GitHub Actions 在推送到 `master`、手动运行和每小时 UTC 第 17 分钟时执行：
 
-1. 从原站简历 HTML 中解析 Nuxt 内嵌的 `active-resume` 数据快照与 `resume-translations` 多语言数据，完整保留作者、精选标记与论文链接，不执行原站脚本。
+1. 从源站同源入口 `https://ricepastem.cafe/api/resume/published` 读取同一个版本的原文和完整译文，保留作者、精选标记、论文链接及版本号。只有接口返回 404（后端尚未升级）时才兼容旧站 HTML 快照；503、翻译未完成或明确取消发布不会回退到草稿。
 2. 下载原站 PDF 字体到构建目录，核对清单及文件长度，后续构建复用 GitHub Actions 缓存。
 3. 用 Nuxt 预渲染静态 HTML，验证资源路径后部署到 GitHub Pages。
 

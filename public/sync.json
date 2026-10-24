@@ -1,8 +1,9 @@
 {
   "source": "https://ricepastem.cafe/resume",
   "format": "nuxt-ssr-payload",
-  "fetchedAt": "2026-10-20T16:20:15.372Z",
-  "sha256": "e56da0848e89979b992ad32cf5fcc7c9b69ab6985ff8169d0e2caff9d24db29c",
+  "revision": null,
+  "fetchedAt": "2026-10-24T09:21:57.317Z",
+  "sha256": "2c59d0174993eaac23ae2ced75e8e51b0433421edf551dfce180bb2574652e8c",
   "translatedLocales": [
     "zh-TW",
     "en",

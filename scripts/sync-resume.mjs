@@ -6,6 +6,7 @@ import { parse } from 'devalue'
 import { collectResumeStrings } from '../app/utils/resumeLocale.js'
 
 export const SOURCE_URL = 'https://ricepastem.cafe/resume'
+export const PUBLISHED_URL = 'https://ricepastem.cafe/api/resume/published'
 const root = fileURLToPath(new URL('../', import.meta.url))
 
 export function validateResume(resume) {
@@ -60,7 +61,7 @@ async function download(url) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const response = await fetch(url, { signal: AbortSignal.timeout(180_000) })
-      if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`)
+      if (!response.ok) throw Object.assign(new Error(`HTTP ${response.status} for ${url}`), { status: response.status })
       return Buffer.from(await response.arrayBuffer())
     } catch (error) {
       if (attempt === 3) throw error
@@ -75,7 +76,19 @@ async function save(path, content) {
 }
 
 export async function synchronize(destination = root, get = download) {
-  const { resume, translations: sourceTranslations } = extractResumeSnapshot((await get(SOURCE_URL)).toString())
+  let published
+  try {
+    const payload = JSON.parse(await get(PUBLISHED_URL))
+    if (payload.code !== 200 || !payload.data) throw new Error('Published resume is unavailable')
+    published = payload.data
+  } catch (error) {
+    // Migration support only: a missing route means the backend has not been upgraded.
+    // Translation errors, outages or explicit unpublication must never publish draft data.
+    if (error.status !== 404) throw error
+    published = extractResumeSnapshot((await get(SOURCE_URL)).toString())
+  }
+  const resume = validateResume(published.resume)
+  const sourceTranslations = published.translations
   const localTranslations = await readFile(join(destination, 'app/i18n/resume-content.json'), 'utf8').then(JSON.parse).catch(() => null)
   const translations = validateTranslations(resume, {
     sourceLocale: 'zh-CN',
@@ -115,7 +128,8 @@ export async function synchronize(destination = root, get = download) {
   const content = `${JSON.stringify(resume, null, 2)}\n`
   const metadata = {
     source: SOURCE_URL,
-    format: 'nuxt-ssr-payload',
+    format: published.revision ? 'published-resume-bundle' : 'nuxt-ssr-payload',
+    revision: published.revision || null,
     fetchedAt: new Date().toISOString(),
     sha256: createHash('sha256').update(content).digest('hex'),
     translatedLocales: ['zh-TW', 'en', 'ja']
