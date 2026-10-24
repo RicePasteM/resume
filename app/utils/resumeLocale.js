@@ -1,3 +1,5 @@
+import { isPublicationSection } from './resumePublications.js'
+
 const profileFields = ['headline', 'summary', 'location']
 const itemFields = ['title', 'subtitle', 'organization', 'location', 'start_date', 'end_date', 'meta', 'description', 'link_label']
 
@@ -33,5 +35,13 @@ export function collectResumeStrings(resume) {
 export function localizeResume(resume, locale, translations) {
   if (locale === 'zh-CN') return resume
   const dictionary = translations?.locales?.[locale] || {}
-  return mapResume(resume, value => dictionary[value] || value)
+  const localized = mapResume(resume, value => dictionary[value] || value)
+  if (locale === 'en') {
+    // Publication subtitles are translated names of the official English title.
+    // Apply this to the shared view model so the page and PDF stay consistent.
+    localized.sections = localized.sections.map((section, index) => isPublicationSection(resume.sections[index])
+      ? { ...section, items: section.items.map(item => ({ ...item, subtitle: '' })) }
+      : section)
+  }
+  return localized
 }

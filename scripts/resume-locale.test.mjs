@@ -27,7 +27,7 @@ test('language changes translate all content levels without changing authorship,
   const result = localizeResume(source, 'en', translations)
   assert.equal(result.summary, 'Research summary')
   assert.equal(result.sections[0].title, 'Publications')
-  assert.equal(result.sections[0].items[0].subtitle, 'Translated subtitle')
+  assert.equal(result.sections[0].items[0].subtitle, '')
   assert.equal(result.sections[0].items[0].points[0].content, '**Accuracy** reaches *81.8%*.')
   assert.equal(result.sections[0].items[0].links[0].label, 'Project page')
   const item = result.sections[0].items[0]
@@ -42,4 +42,18 @@ test('language changes translate all content levels without changing authorship,
 test('new or untranslated source text stays readable until translations are regenerated', () => {
   assert.equal(localizeResume(source, 'ja', translations).summary, source.summary)
   assert.equal(localizeResume({ ...source, summary: '新内容' }, 'en', translations).summary, '新内容')
+})
+
+
+test('English omits publication translated titles while other languages and experience subtitles remain intact', () => {
+  const profile = structuredClone(source)
+  profile.sections.push({ id: 5, section_key: 'experience', title: 'Experience', items: [{ title: 'Project', subtitle: '中文副标题' }] })
+  const en = localizeResume(profile, 'en', translations)
+  assert.equal(en.sections[0].items[0].title, 'Paper: Official Title')
+  assert.equal(en.sections[0].items[0].subtitle, '')
+  assert.equal(en.sections[1].items[0].subtitle, 'Translated subtitle')
+  for (const locale of ['zh-CN', 'zh-TW', 'ja']) {
+    assert.equal(localizeResume(profile, locale, translations).sections[0].items[0].subtitle, '中文副标题')
+  }
+  assert.equal(profile.sections[0].items[0].subtitle, '中文副标题', 'source data and translation cache remain unchanged')
 })
